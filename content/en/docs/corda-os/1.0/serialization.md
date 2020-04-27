@@ -97,7 +97,7 @@ The long term goal is to migrate the current serialization format for everything
 
 
 * A desire to have a schema describing what has been serialized along-side the actual data:
-#.  To assist with versioning, both in terms of being able to interpret long ago archived data (e.g. trades from>
+#.  To assist with versioning, both in terms of being able to interpret long ago archived data (e.g. trades from> 
 a decade ago, long after the code has changed) and between differing code versions.
 
 * To make it easier to write user interfaces that can navigate the serialized form of data.
@@ -118,7 +118,7 @@ Documentation on that format, and how JVM classes are translated to AMQP, will b
 
 We describe here what is and will be supported in the Corda AMQP format from the perspective
 of CorDapp developers, to allow for CorDapps to take into consideration the future state.  The AMQP serialization format will of
-course continue to apply the whitelisting functionality that is already in place.
+course continue to apply the whitelisting functionality that is already in place and described in this page.
 
 
 ## Core Types
