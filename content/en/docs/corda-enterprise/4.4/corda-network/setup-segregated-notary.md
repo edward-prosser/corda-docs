@@ -17,17 +17,15 @@ a measure of independence and control over the network parameters within a large
 When operating in a Corda Network segregated network, you must deploy, register, and operate the notary. There are three
 notary implementations to choose from:
 
-- A single notary node
-- A notary cluster using a single node
-- A highly-available (HA) notary cluster requiring multiple nodes
+- A single-node notary.
+- A notary cluster using a single node.
+- A highly-available (HA) notary cluster requiring multiple nodes.
 
-You should take care when deciding on the type of notary to deploy, as single notary nodes cannot be upgraded to HA notaries later.
-In production environments we recommend using a notary cluster for additional reliability and scalability.
+By adding additional notary worker nodes, a notary cluster can have more reliability and scalabilty than a single-node notary.
 
-## Configuring and deploying a single notary node
+## Configuring and deploying a single-node notary
 
-Single node notaries do not require a separate notary service identity, these notaries use the node identity and do not require additional notary registration. Single node notaries are not compatible with a highly-available solution and are not recommended for production networks.
-
+Single-node notaries do not require a separate notary service identity, these notaries use the node identity and do not require additional notary registration. Single-node notaries are not compatible with a highly-available solution and are not recommended for production networks.
 
 1. Follow steps 3-5 from the [Corda Network joining process](https://corda.network/participation/index/).
 
@@ -37,33 +35,32 @@ Single node notaries do not require a separate notary service identity, these no
 
     The registration process will create a `nodeInfo-xxx` file containing the network address, port number, legal identity, certificates, platform version, and serial number of the notary.
 
-3. Update the network parameters by sending the `nodeInfo-xxx` file using the Corda Network Support Portal using either a segregated network request form, or by creating a new task.
+3. Update the network parameters by sending the `nodeInfo-xxx` file using the Corda Network support portal. Send the `nodeInfo-xxx` file using either a segregated network request form, or create a new task.
 
 4. Restart the notary by running the following command:
 
     `java -jar /path-of-notary/corda.jar`
 
 
-## Configuring and deploying a notary cluster
+## Configuring and deploying a notary
 
-A notary cluster is a group of at least one node that act together as one pooled notary service. Notary clusters can improve
+A notary cluster is a group of one or more nodes that act together as a collective notary service. Notary clusters can improve
 notary scalability and reliability because additional nodes can be added to the notary pool as demand increases.
 
 Single-node and multi-node notary clusters are only available in Corda Enterprise. Before deploying a notary cluster,
-read the [JPA notary configuration documentation](../notary/installing-jpa.html/). A notary cluster requires a backend database to store notarised
+read the [JPA notary configuration documentation](../notary/installing-jpa.md/). A notary cluster requires a backend database to store notarised
 transactions. A notary cluster can be registered, but not run, without a database.
 
 {{< note >}}
-Please note that you must register the notary service identity **before** the initial notary worker registration.
+You must register the notary service identity **before** the initial notary worker registration.
 {{< /note >}}
 
-1. Register the notary service identity using the [notary registration tool](../notary/ha-notary-service-setup.html#ha-notary-registration-process).
+1. Register the notary service identity using the [notary registration tool](../notary/ha-notary-service-setup.md#ha-notary-registration-process).
 
 2. Register each worker node in the notary cluster using the Corda Network process.
 
-    Each worker node requires access to the notary service identity key generated in the preceding step. We recommend using
-    an HSM to ensure key security.
+    Each worker node requires access to the notary service identity key generated in the preceding step. An HSM should be used to ensure key security.
 
-3. Add the notary service identity to the network parameters by sending the `nodeInfo-xxx` file using the Corda Network Support Portal using either a segregated network request form, or by creating a new task.
+3. Add the notary service identity to the network parameters by sending the `nodeInfo-xxx` file using the Corda Network support portal. Send the `nodeInfo-xxx` file using either a segregated network request form, or create a new task.
 
-4. After the network parameters have been updated, start the notary worker nodes.
+4. After the network parameters have been updated, [start the notary worker nodes](../operations/deployment/starting-components.md#starting-a-corda-node).
