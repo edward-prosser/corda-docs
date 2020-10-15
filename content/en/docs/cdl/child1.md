@@ -12,4 +12,32 @@ title: Child topic
 # Child topic
 
 
-More lipsum
+More lipsum with an extra bit
+
+![node diagram](./resources/node-diagram.png "node diagram")
+
+
+
+
+
+
+{{% mermaid %}}
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+{{% /mermaid %}}
+
+
+{{< tabs name="tabs-1234" >}}
+{{% tab name="kotlin" %}}
+'''kotlin
+//your code here
+'''
+{{% /tab %}}
+{{% tab name="java" %}}
+'''java
+//your other code here
+'''{{% /tab %}}
+{{< /tabs >}}
