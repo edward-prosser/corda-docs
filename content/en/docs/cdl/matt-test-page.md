@@ -3,6 +3,7 @@ title: "Matt Test Page"
 date: 2020-09-09T10:56:06+01:00
 menu:
     cordapp-design-language:
+      parent: cordapp-design-language-test-topic
       identifier: cordapp-design-language-matt-test-page
       weight: 12
 tags:
