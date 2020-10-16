@@ -1,9 +1,9 @@
 ---
 title: "CDL Overview"
-date: 2020-09-09T11:05:59+01:00
+date: 2020-10-15T00:00:00+01:00
 menu:
     cordapp-design-language:
-      identifier: cordapp-design-language-matt-overview
+      identifier: cdl-overview
       weight: 10
 
 tags:
@@ -19,9 +19,9 @@ Welcome to the CorDapp Design Language Documentation. This site will guide you t
 
 ## What is Cordapp Design Language?
 
-Corda Design Language (CDL) consists of a series of diagrammatic views which aims to concisly and accurately represent CorDapp designs. It aims to:
+Corda Design Language (CDL) consists of a series of diagrammatic views which aims to concisely and accurately represent CorDapp designs. It aims to:
 
-- Allow Engineers to represent and reason about core aspects of the corda design including: Ledger data, shared Logic, permisioning and privacy.
+- Allow Engineers to represent and reason about core aspects of the corda design including: Ledger data, shared Logic, permissioning and privacy.
 - Enable more complex Cordapp designs to be reasoned about than would be otherwise possible, through abstraction from the code and standardisation.
 - Encourage good CorDapp designs.
 - Enable the documentation of standardised design patterns.
@@ -66,7 +66,7 @@ It can also be used to communicate to non-technical audiences, for example in Ma
 
 
 
-## What are the main CDL views
+## What are the main CDL views?
 
 Currently, there are three main CDL views, each of which serve a different purpose in communicating a CorDApp design:
 
