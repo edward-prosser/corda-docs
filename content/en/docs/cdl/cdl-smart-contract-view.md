@@ -8,9 +8,10 @@ menu:
     weight: 12
 
 tags:
-- this
-- that
-- the other
+- cdl
+- cordapp design language
+- smart contract
+- cordapp diagram
 ---
 
 # CDL - Smart Contract View
@@ -128,7 +129,7 @@ Note that rejectionReason and rejectedBy are nullable as they will not be requir
 As we want this to be a private transaction, we want the participants to be limited to the buyer and seller. ie both the buyer and seller will receive copies of the transactions but nobody else. (Although we must later consider who gets copies of transaction through the transaction resolution process)
 
 
-## Statuses
+### Statuses
 
 Once we have defined the state, we need to show the different statuses that the state can be in. We do this by having a copy of the State for each status.
 
