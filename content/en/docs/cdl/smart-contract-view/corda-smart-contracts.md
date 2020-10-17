@@ -8,9 +8,10 @@ menu:
     weight: 20
 
 tags:
-- this
-- that
-- the other
+- cdl
+- cordapp design language
+- smart contract
+- cordapp diagram
 ---
 
 

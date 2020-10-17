@@ -12,6 +12,7 @@ tags:
 - cordapp design language
 - smart contract
 - cordapp diagram
+- path constraints
 ---
 
 # Paths Constraints

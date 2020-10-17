@@ -12,11 +12,12 @@ tags:
 - cordapp design language
 - smart contract
 - cordapp diagram
+- signing constraints
 ---
 
 # Signing Constraints
 
-An important aspect of any CorDapp is the permissioning model, in other words who needs to sign which transactions. In Corda, the required signers are attached to the Transaction's Command. We mirror this in the CDL Smart contract view by including the require signer in brackets underneath the Command on the Path constraint.
+An important aspect of any CorDapp is the permissioning model, in other words who needs to sign which transactions. In Corda, the required signers are attached to the Transaction's Command. We mirror this in the CDL Smart Contract view by including the require signer in brackets underneath the Command on the Path constraint.
 
 {{< figure zoom="../resources/cdl-agreement-smart-contract-signing.png" width="1000" title="Click to zoom image in new tab/window" >}}
 
@@ -26,4 +27,4 @@ It is also important to specify which state you are referencing for the property
 
 In our example when performing a Repropose command, the output.proposer must sign, this may well be a different value from the input.proposer.
 
-In some use cases signing constraints can get more complicated. A deliberately convoluted example might be: The buyer or seller must sign unless an escrow agent has presented a state of type X before the 3rd Tuesday in May. If this is the case, its best to use a separate call out to explain the constraint in more detail.
+In some use cases signing constraints can get more complicated. A deliberately convoluted example might be: The buyer or seller must sign unless an escrow agent has presented a state of type X before the 3rd Tuesday in May in which case two of three appointed arbiters can sign. If this is the case, its best to use a separate call out to explain the constraint in more detail.

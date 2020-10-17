@@ -12,6 +12,7 @@ tags:
 - cordapp design language
 - smart contract
 - cordapp diagram
+- states
 ---
 
 # States

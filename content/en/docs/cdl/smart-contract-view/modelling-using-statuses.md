@@ -12,6 +12,7 @@ tags:
 - cordapp design language
 - smart contract
 - cordapp diagram
+- statuses
 ---
 
 # Modelling using Statuses
