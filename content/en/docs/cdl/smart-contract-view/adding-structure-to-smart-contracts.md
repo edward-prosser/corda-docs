@@ -1,5 +1,5 @@
 ---
-title: Adding Structure with CDL
+title: Adding structure with CDL
 date: 2020-10-15T00:00:00+01:00
 menu:
   cordapp-design-language:

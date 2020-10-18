@@ -10,4 +10,4 @@ title: CorDapp Design Language
 
 # CorDapp Design Language
 
-Lipsum
+Welcome to the CorDapp Design Language Documentation. This site will guide you through what CDL is, why it was developed and how to use it to effectively document, analyse and communicate your CorDapp (Corda Distributed Application) designs.
