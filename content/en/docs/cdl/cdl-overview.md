@@ -71,6 +71,8 @@ An example Smart Contract View:
 
 {{< figure zoom="./resources/cdl-agreement-smart-contract-full.png" width="800" title="Click to zoom image in new tab/window" >}}
 
+This diagram shows the three statuses an Agreement can have, together with the possible transitions from one status to another, and the constraints governing both statuses and transitions. The black filled circle on the left represents the initial, uncreated, state of an Agreement, which is brought into existence by being proposed, while the circle on the right represents the terminal, completed state in which the agreement has been fulfilled.
+
 The base assumption behind the view is that Corda States can be in a number of 'statuses' which might represent, for example, different stages on a multiparty workflow. We define rules for how the Smart contract can move between statuses and the constraints which must be satisfied with each transition.
 
 This view is conceptually modelled on a Finite State Machine. The classic example of which is a washing machine that has two states: 'Full of water' and 'Empty'. The washing machine's Finite State Machine should have the constraint that the user can only execute the 'Open door' Command when the washing machine is in the 'Empty' State. If it doesn't, someone is going to end up with a very wet floor.
@@ -78,34 +80,34 @@ This view is conceptually modelled on a Finite State Machine. The classic exampl
 For simple CorDapp Smart Contracts, there may only be one, implicit status. The Smart Contract view can still be used to communicate the design, it just devolves down to a diagram with only one state box. See the CashState Example in the previous sections.
 
 
-A detailed explanation of the elements which make up the Smart Contract view can be found here **add link **
+A detailed explanation of the elements which make up the Smart Contract view can be found [here](cdl-smart-contract-view.md)
 
 A Lucidchart template with the CDL Smart Contract view standard shapes can be found here ** add link **
 
-In addition, the section *** add link ** shows a standardised way to transform the CDL Smart Contract view into code.
+In addition, the section [CDL to Code](cdl-convert-to-code.md) section shows a standardised way to transform the CDL Smart Contract view into code.
 
 
 ### The Ledger view (with Privacy overlay)
 
 If the Smart Contract defines a Smart Contract's design, the Ledger view is showing that Smart Contract in action.
 
-The Corda Ledger can be considered as a Directed Acyclic Graph (DAG) in which states are generated as outputs to a transaction and go on to be consumed as the inputs of other transactions, with the transactions having associated properties such as the commands and who signed them.
+The Corda Ledger can be considered as a Directed Acyclic Graph (DAG) of states and transactions connected by input/output relationships, in which states are generated as outputs to a transaction and go on to be consumed as the inputs of other transactions, with the transactions having associated properties such as the commands and who signed them.
 
 You can't, nor is it useful to, attempt to show the whole Corda ledger. However, it is useful to show a sub-graph of the wider Ledger which concerns a particular set of transitions for the Smart Contract in question, and that's what the Ledger view does.
 
 An example Ledger view:
 
 
-{{< figure zoom="./resources/cdl-agreement-private-billing alternative-full.png" width="800" title="Click to zoom image in new tab/window" >}}
+{{< figure zoom="./resources/cdl-agreement-naive-billing-ledger-evolution-charlie.png" width="800" title="Click to zoom image in new tab/window" >}}
 
+Here both states and transactions are represented as "nodes" in the graph. There is a connecting arrow from a transaction to a state when the state is an output of the transaction, and from a state to a transaction when the state is consumed by that transaction.
 
-
-The Ledger view also has an additional Privacy overlay represented as the purple and orange lines in the above diagram. Each overlay is from the perspective of a Party on the ledger. It starts with a state which the Party is a participant on and then traces back through the DAG to show all the previous transactions the Party's node will receive a copy of through the transaction resolution mechanism.
+The Ledger view also has an additional Privacy overlay represented as the purple and orange lines in the above diagram. Each overlay is from the perspective of a Party on the ledger. It starts with a state which the Party is a participant on and then traces back through the DAG to show all the previous transactions the Party's node will receive a copy of through the transaction resolution mechanism. The green circles indicate that privacy has been preserved, where as the red circles indicate a privacy leak.
 
 With this view, you have insight on privacy from the design phase. An unintended privacy leak can be a show stopper for a CorDapp. It's best to consider this early on, not at the point where the customers Infosec team won't sign off the deployment.
 
 
-A detailed explanation of the elements which make up the Ledger view can be found here **add link **
+A detailed explanation of the elements which make up the Ledger Evolution view can be found [here](cdl-ledger-evolution-view.md)
 
 A Lucidchart template with the CDL Ledger view standard shapes can be found here ** add link **
 
@@ -113,7 +115,6 @@ A Lucidchart template with the CDL Ledger view standard shapes can be found here
 ### The Business Process Modelling Notation (BPMN) views
 
 The Business Process Modelling Notation View is, as the name suggests, a BPMN diagram showing the process flows of your CorDapp. It can be used to describe the macro Business Process flows, or alternatively the back and forth communication within a Corda Flow.
-
 
 An example BPMN view:
 
