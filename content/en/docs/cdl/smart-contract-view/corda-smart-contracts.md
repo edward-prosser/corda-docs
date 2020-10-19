@@ -23,9 +23,9 @@ First things first, 'Smart Contract' is a term that is often used in the distrib
 - The functions or things you can do to that data are defined in the Contract.
 - The way which those functions are enacted is via building new transactions in the Flows which uses the states and conform to the Corda Contracts.
 
-So its all there, but not in a neat encapsulated package. Which is a good thing because this approach actually leads to a great deal of flexibility. For examples, the Flows are not just limited to enacting a transition on the Ledger, they are a powerful messaging framework which allows you to send anything you like to counterparties with confidence.
+So its all there, but not in a neat encapsulated package. Which is a good thing because this approach actually leads to a great deal of flexibility. For example, the Flows are not just limited to enacting a transition on the Ledger, they are a powerful messaging framework which allows you to send anything you like to counterparties with confidence.
 
-For the purposes of CDL we are going to define a Corda Smart Contract as the combination of one or more types of ContractState which are constrained by a Corda Contract. We'll leave the Flows out of it as we are agnostic as to how the transactions get built up, we will only concern ourselves with the validity of the final transaction.
+For the purposes of CDL we are going to define a Corda Smart Contract as the combination of one or more types of ContractState which are constrained by a Corda Contract. We'll leave the Flows out of it as we are agnostic as to how the transactions get built up: we will only concern ourselves with the validity of the final transaction.
 
 So our Smart Contracts are basically a combination of data (ContractStates) and what we're allowed to do with it (Contracts).
 
