@@ -282,7 +282,7 @@ customized with the configuration file. See [Public Key Infrastructure (PKI) Too
 **Full End to End SSL communication**
 
 All CENM components now communicate over SSL with one another, this completes the removal of the “database as message
-queue” of older versions. See [Configuring the ENM services to use SSL](enm-with-ssl.md) for more information.
+queue” of older versions. See [Configuring the CENM services to use SSL](enm-with-ssl.md) for more information.
 
 **Security And Performance Fixes**
 
@@ -384,6 +384,6 @@ there is no dedicated utility that would address that issue. As for now, the net
 assess in what state the service is.
 
 
-* Identity Manager: [http:/](http:/)/<<IDENTITY_MANAGER_ADDRESS>>/status
-* Network Map: [http:/](http:/)/<<NETWORK_MAP_SERVICE_ADDRESS>>/network-map/my-hostname
-* Revocation Service (currently part of the Identity Manager): [http:/](http:/)/<<REVOCATION_SERVICE_ADDRESS>>/status
+* Identity Manager: `http://<<IDENTITY_MANAGER_ADDRESS>>/status`
+* Network Map: `http://<<NETWORK_MAP_SERVICE_ADDRESS>>/network-map/my-hostname`
+* Revocation Service (currently part of the Identity Manager): `http://<<REVOCATION_SERVICE_ADDRESS>>/status`

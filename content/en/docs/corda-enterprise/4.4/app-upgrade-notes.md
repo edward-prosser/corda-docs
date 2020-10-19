@@ -38,7 +38,22 @@ If you are using them you should re-namespace them to a package namespace you co
 
 {{< /warning >}}
 
+## Platform version matrix
 
+{{< table >}}
+| Corda release  | Platform version |
+| :------------- | :------------- |
+| 4.4 | 6 |
+| 4.3 | 5 |
+| 4.2 | 4 |
+| 4.1 | 4 |
+| 4.0 | 4 |
+| 3.3 | 3 |
+{{< /table >}}
+
+## Upgrading apps to Platform Version 6
+
+No manual upgrade steps are required.
 
 
 ## Upgrading apps to Platform Version 5
@@ -371,7 +386,7 @@ public static class SimpleFlowUsingOldApi extends FlowLogic<SignedTransaction> {
 
 
 
-[FinalityFlowMigration.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
+[FinalityFlowMigration.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -420,7 +435,7 @@ public static class SimpleFlowUsingNewApi extends FlowLogic<SignedTransaction> {
 
 
 
-[FinalityFlowMigration.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
+[FinalityFlowMigration.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -467,7 +482,7 @@ public static class SimpleNewResponderFlow extends FlowLogic<Void> {
 
 
 
-[FinalityFlowMigration.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
+[FinalityFlowMigration.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -546,7 +561,7 @@ public static class ExistingInitiatingFlow extends FlowLogic<SignedTransaction> 
 
 
 
-[FinalityFlowMigration.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
+[FinalityFlowMigration.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -606,7 +621,7 @@ if (otherSide.getCounterpartyFlowInfo().getFlowVersion() >= 2) {
 
 
 
-[FinalityFlowMigration.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
+[FinalityFlowMigration.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 

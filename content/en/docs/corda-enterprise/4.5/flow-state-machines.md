@@ -105,7 +105,7 @@ movement of the asset.
 transaction in B’s local vault, and then sending it on to S who also checks it and commits the transaction to S’s
 local vault.
 
-You can find the implementation of this flow in the file `finance/workflows/src/main/kotlin/net/corda/finance/TwoPartyTradeFlow.kt`.
+You can find the implementation of this flow in the file [TwoPartyTradeFlow.kt](https://github.com/corda/corda/blob/release/os/4.5/finance/workflows/src/main/kotlin/net/corda/finance/flows/TwoPartyTradeFlow.kt).
 
 Assuming no malicious termination, they both end the flow being in possession of a valid, signed transaction that
 represents an atomic asset swap.
@@ -171,11 +171,6 @@ object TwoPartyTradeFlow {
 
 ```
 {{% /tab %}}
-
-
-
-
-[TutorialFlowStateMachines.kt](https://github.com/corda/enterprise/blob/release/ent/4.5/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/tutorial/flowstatemachines/TutorialFlowStateMachines.kt) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -324,7 +319,7 @@ override fun call(): SignedTransaction {
 
 
 
-[TwoPartyTradeFlow.kt](https://github.com/corda/enterprise/blob/release/ent/4.5/finance/workflows/src/main/kotlin/net/corda/finance/flows/TwoPartyTradeFlow.kt) | ![github](/images/svg/github.svg "github")
+[TwoPartyTradeFlow.kt](https://github.com/corda/corda/blob/release/os/4.5/finance/workflows/src/main/kotlin/net/corda/finance/flows/TwoPartyTradeFlow.kt) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -451,7 +446,7 @@ private fun assembleSharedTX(assetForSale: StateAndRef<OwnableState>, tradeReque
 
 
 
-[TwoPartyTradeFlow.kt](https://github.com/corda/enterprise/blob/release/ent/4.5/finance/workflows/src/main/kotlin/net/corda/finance/flows/TwoPartyTradeFlow.kt) | ![github](/images/svg/github.svg "github")
+[TwoPartyTradeFlow.kt](https://github.com/corda/corda/blob/release/os/4.5/finance/workflows/src/main/kotlin/net/corda/finance/flows/TwoPartyTradeFlow.kt) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -630,7 +625,7 @@ val txId = subFlow(signTransactionFlow).id
 
 
 
-[TwoPartyTradeFlow.kt](https://github.com/corda/enterprise/blob/release/ent/4.5/finance/workflows/src/main/kotlin/net/corda/finance/flows/TwoPartyTradeFlow.kt) | ![github](/images/svg/github.svg "github")
+[TwoPartyTradeFlow.kt](https://github.com/corda/corda/blob/release/os/4.5/finance/workflows/src/main/kotlin/net/corda/finance/flows/TwoPartyTradeFlow.kt) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -771,7 +766,7 @@ private static final ProgressTracker.Step RECORDING = new ProgressTracker.Step(
 
 
 
-[TwoPartyTradeFlow.kt](https://github.com/corda/enterprise/blob/release/ent/4.5/finance/workflows/src/main/kotlin/net/corda/finance/flows/TwoPartyTradeFlow.kt) | [TutorialFlowStateMachines.java](https://github.com/corda/enterprise/blob/release/ent/4.5/docs/source/example-code/src/main/java/net/corda/docs/java/tutorial/flowstatemachines/TutorialFlowStateMachines.java) | ![github](/images/svg/github.svg "github")
+[TwoPartyTradeFlow.kt](https://github.com/corda/corda/blob/release/os/4.5/finance/workflows/src/main/kotlin/net/corda/finance/flows/TwoPartyTradeFlow.kt) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -813,7 +808,7 @@ private static final ProgressTracker.Step VERIFYING_AND_SIGNING = new ProgressTr
 
 
 
-[TwoPartyTradeFlow.kt](https://github.com/corda/enterprise/blob/release/ent/4.5/finance/workflows/src/main/kotlin/net/corda/finance/flows/TwoPartyTradeFlow.kt) | [TutorialFlowStateMachines.java](https://github.com/corda/enterprise/blob/release/ent/4.5/docs/source/example-code/src/main/java/net/corda/docs/java/tutorial/flowstatemachines/TutorialFlowStateMachines.java) | ![github](/images/svg/github.svg "github")
+[TwoPartyTradeFlow.kt](https://github.com/corda/corda/blob/release/os/4.5/finance/workflows/src/main/kotlin/net/corda/finance/flows/TwoPartyTradeFlow.kt) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 

@@ -82,7 +82,7 @@ public class MockNetworkTestsTutorial {
 
 
 
-[MockNetworkTestsTutorial.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/MockNetworkTestsTutorial.kt) | [MockNetworkTestsTutorial.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/MockNetworkTestsTutorial.java) | ![github](/images/svg/github.svg "github")
+[MockNetworkTestsTutorial.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/MockNetworkTestsTutorial.kt) | [MockNetworkTestsTutorial.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/MockNetworkTestsTutorial.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -133,7 +133,7 @@ Nodes are created on the `MockNetwork` using:
 
 
 
-[MockNetworkTestsTutorial.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/MockNetworkTestsTutorial.kt) | [MockNetworkTestsTutorial.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/MockNetworkTestsTutorial.java) | ![github](/images/svg/github.svg "github")
+[MockNetworkTestsTutorial.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/MockNetworkTestsTutorial.kt) | [MockNetworkTestsTutorial.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/MockNetworkTestsTutorial.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -261,9 +261,6 @@ SignedTransaction transaction = nodeA.getServices().getValidatedTransactions().g
 This allows you to check whether a given transaction has (or has not) been stored, and whether it has the correct
 attributes.
 
-This allows you to check whether a given state has (or has not) been stored, and whether it has the correct attributes.
-
-
 ### Further examples
 
 
@@ -304,7 +301,7 @@ private static final TestIdentity bigCorp = new TestIdentity(new CordaX500Name("
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
+[TutorialTestDSL.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -399,7 +396,7 @@ private val ledgerServices = MockServices(
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
+[TutorialTestDSL.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -441,7 +438,7 @@ private final MockServices simpleLedgerServices = new MockServices(
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
+[TutorialTestDSL.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -500,7 +497,7 @@ public void simpleCPMoveSuccess() {
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
+[TutorialTestDSL.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -556,7 +553,7 @@ public void simpleCPMoveFails() {
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
+[TutorialTestDSL.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -618,7 +615,7 @@ public void simpleCPMoveSuccessAndFailure() {
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
+[TutorialTestDSL.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -674,7 +671,7 @@ public void simpleIssuanceWithTweakTopLevelTx() {
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
+[TutorialTestDSL.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -787,7 +784,7 @@ public void chainCommercialPaperDoubleSpend() {
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
+[TutorialTestDSL.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/kotlin/net/corda/docs/kotlin/tutorial/testdsl/TutorialTestDSL.kt) | [TutorialTestDSL.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/TutorialTestDSL.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -799,4 +796,3 @@ public void chainCommercialPaperDoubleSpend() {
 * Further examples are available in the Example CorDapp in
 [Java](https://github.com/corda/samples/blob/release-V4/cordapp-example/workflows-java/src/test/java/com/example/flow/IOUFlowTests.java) and
 [Kotlin](https://github.com/corda/samples/blob/release-V4/cordapp-example/workflows-kotlin/src/test/kotlin/com/example/flow/IOUFlowTests.kt)
-
