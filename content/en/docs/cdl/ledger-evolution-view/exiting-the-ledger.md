@@ -21,4 +21,4 @@ Our example is nearly complete, we need the final transaction created and signed
 
 {{< figure zoom="../resources/cdl-agreement-ledger-evolution-tx5.png" width="1000" title="Click to zoom image in new tab/window" >}}
 
-Hopefully this worked example has shown how the Ledger Evolution diagrams are a great way of bringing a Smart Contract to life by tell the 'story' of how if gets used in action.
+Hopefully this worked example has shown how the Ledger Evolution diagrams are a great way of bringing a Smart Contract to life by telling the 'story' of how if gets used in action.

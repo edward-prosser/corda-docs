@@ -26,6 +26,6 @@ We could illustrate this as follows:
 
 {{< figure zoom="../resources/cdl-ledger-dag.png" width="800" title="Click to zoom image in new tab/window" >}}
 
-However, it is difficult to get all the information we want to show into this format so we will us a similar form but modify the graph's nodes to closer align to the representations of states already introduced in the Smart Contract view.
+However, it is difficult to get all the information we want to show into this format, so we will use a similar form but modify the graph's nodes to align more closely to the representations of states already introduced in the Smart Contract view.
 
-We will also not show the signers to the transaction as separate node, instead we will just attach them to the transactions directly.
+We will also not show the signers to the transaction as separate nodes, instead we will just attach them to the transactions directly.

@@ -17,7 +17,9 @@ tags:
 
 
 
-# The Corda paradigm - Corda Smart Contracts define what you can't do, not what you can
+# The Corda Paradigm -
+
+Corda Smart Contracts define what you can't do, not what you can.
 
 The normal programming paradigm is that in a given context you have a set of available functions that take inputs and produce outputs. Other Blockchains, for example Ethereum, use this approach: what you can do with a Solidity Smart Contract is defined by the methods which are made available to the user of the Smart Contract.
 
@@ -29,4 +31,6 @@ So if the actions that a Smart Contract user can take needs to be limited, which
 
 The structure provided by CDL aims to help the Smart Contract designer make sure there are no 'Holes in the Fence' which unwanted behaviour can slip through.
 
-Note, in most CorDapps the actions a user can take are limited by the Flows which are provided in the CorDapp. But it is important to remember that Flows can be, and to an extent are intended to be, rewritten by each Counterparty to suit their particular implementation requirements. The Corda guarantee of shared data and logic is only valid at the Smart Contract/ transaction level. Controls written into the Flows are by their nature not as secure as controls written into the Smart Contracts.
+{{< note >}}
+Note: In most CorDapps the actions a user can take are limited by the Flows which are provided in the CorDapp. But it is important to remember that Flows can be, and to an extent are intended to be, rewritten by each Ccunterparty to suit their particular implementation requirements. The Corda guarantee of shared data and logic is only valid at the Smart Contract/ transaction level. Controls written into the Flows are by their nature not as secure as controls written into the Smart Contracts.
+{{< /note >}}

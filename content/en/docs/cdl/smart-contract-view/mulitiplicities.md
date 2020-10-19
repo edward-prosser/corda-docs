@@ -36,7 +36,7 @@ The options above can be combined to form ranges, eg
 
 - 0..n : there can be zero to n states of the primary state type
 
-For example, in our diagram,  Path 1 'PROPOSED -- Ageee --> AGREED':
+For example, in our diagram,  Path 1 'PROPOSED -- Agree --> AGREED':
  - The input multiplicity is 1, indicating there must be one and only one input state of type AgreementState in status 'PROPOSED'
  - The output multiplicity is 1: Matched, indicating there must be one and only one output state of type AgreementState and that the LinearID must match that of the input state.
 

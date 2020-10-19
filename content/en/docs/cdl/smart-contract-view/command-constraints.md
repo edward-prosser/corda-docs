@@ -30,4 +30,4 @@ We can use Command constraints to indicate, amongst other thing:
 
 - A required change in a state from another Smart contract, eg in our example the incrementing of a BillingState
 
-- that properties across different states must match, eg the reference in state A must match the reference in state B.
+- That properties across different states must match, eg the reference in state A must match the reference in state B.
