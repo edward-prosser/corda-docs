@@ -21,8 +21,6 @@ In configuring the notary worker nodes, please note the following:
 
 
 * The X500 name of the notary service is configured in `notary.serviceLegalName`. *Only required for HA notaries*
-* Notice the parameters `rewriteBatchedStatements=true&useSSL=false&failOverReadOnly=false`
-of the JDBC URL
 * Put the IP address or host name of the nearest shared DB server first in the JDBC
 URL. When running a DB node and a notary worker node on a single machine, list the
 local IP first
@@ -96,11 +94,11 @@ jarDirs = [PATH_TO_JDBC_DRIVER_DIR]
 
 
 
-[node.conf](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/notary/resources/node.conf) | ![github](/images/svg/github.svg "github")
+[node.conf](../resources/node.conf) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
-See ../corda-configuration-file for a complete reference.
+See [Node configuration](../../node/setup/corda-configuration-file.md) for a complete reference.
 
 
 ## MySQL notary (deprecated)
@@ -134,7 +132,7 @@ notary {
 
 
 
-[percona.conf](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/notary/resources/percona.conf) | ![github](/images/svg/github.svg "github")
+[percona.conf](../resources/percona.conf) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -179,7 +177,7 @@ dataSourceProperties = {
 }
 ```
 
-[config_obfuscator](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/notary/resources/config_obfuscator)
+[config_obfuscator](../resources/config_obfuscator)
 
 
 

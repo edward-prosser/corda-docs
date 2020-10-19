@@ -41,7 +41,7 @@ that chains back to the common root.
 
 {{< important >}}
 For the avoidance of doubt, the trust root, certificates and keys used to secure communication between
-ENM components are completely independent of those created/managed by this toolset for the management of
+CENM components are completely independent of those created/managed by this toolset for the management of
 a Corda network.
 
 
@@ -325,9 +325,6 @@ shell {
 
 ```
 
-[identity-manager-prod-valid.conf](https://github.com/corda/network-services/blob/release/1.2/services/src/test/resources/v1.1-configs/identity-manager/identity-manager-prod-valid.conf)
-
-
 ### Network Map Service
 
 ```docker
@@ -390,9 +387,6 @@ shell {
 }
 
 ```
-
-[network-map-prod-valid.conf](https://github.com/corda/network-services/blob/release/1.2/services/src/test/resources/v1.1-configs/network-map/network-map-prod-valid.conf)
-
 
 ### Signing Service
 
@@ -621,5 +615,3 @@ signers = {
 }
 
 ```
-
-[signer-prod-valid.conf](https://github.com/corda/network-services/blob/release/1.2/services/src/test/resources/v1.1-configs/signer/signer-prod-valid.conf)

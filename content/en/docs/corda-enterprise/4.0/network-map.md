@@ -153,9 +153,7 @@ in the compatibility zone.
 
 
 * **maxMessageSize**:
-Maximum allowed size in bytes of an individual message sent over the wire. Note that attachments are
-a special case and may be fragmented for streaming transfer, however, an individual transaction or flow message
-may not be larger than this value.
+Maximum allowed size in bytes of an individual message sent over the wire.
 
 
 * **maxTransactionSize**:
@@ -239,7 +237,7 @@ data class ParametersUpdateInfo(
 
 ```
 
-[CordaRPCOps.kt](https://github.com/corda/enterprise/blob/release/ent/4.0/core/src/main/kotlin/net/corda/core/messaging/CordaRPCOps.kt)
+[CordaRPCOps.kt](https://github.com/corda/corda/blob/release/os/4.0/core/src/main/kotlin/net/corda/core/messaging/CordaRPCOps.kt)
 
 
 ### Auto Acceptance
@@ -283,7 +281,7 @@ data class NetworkParameters(
 
 ```
 
-[NetworkParameters.kt](https://github.com/corda/enterprise/blob/release/ent/4.0/core/src/main/kotlin/net/corda/core/node/NetworkParameters.kt)
+[NetworkParameters.kt](https://github.com/corda/corda/blob/release/os/4.0/core/src/main/kotlin/net/corda/core/node/NetworkParameters.kt)
 
 This behaviour can be turned off by setting the optional node configuration property `NetworkParameterAcceptanceSettings.autoAcceptEnabled`
 to `false`. For example:
@@ -368,4 +366,3 @@ java -jar corda.jar clear-network-cache
 or call RPC method *clearNetworkMapCache* (it can be invoked through the node’s shell as *run clearNetworkMapCache*, for more information on
 how to log into node’s shell see [Node shell](shell.md)). As we are testing and hardening the implementation this step shouldn’t be required.
 After cleaning the cache, network map data is restored on the next poll from the server or filesystem.
-
