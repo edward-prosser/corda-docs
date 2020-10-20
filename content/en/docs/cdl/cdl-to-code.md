@@ -11,6 +11,7 @@ tags:
 - cordapp design language
 - contract to code
 - cordapp diagram
+- cdl-example
 ---
 
 # Converting CDL Smart Contracts To Code
