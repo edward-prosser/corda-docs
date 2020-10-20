@@ -84,7 +84,7 @@ A detailed explanation of the elements which make up the Smart Contract view can
 
 A Lucidchart template with the CDL Smart Contract view standard shapes can be found here ** add link **
 
-In addition, the section [CDL to Code](cdl-convert-to-code.md) section shows a standardised way to transform the CDL Smart Contract view into code.
+In addition, the section [CDL to Code](cdl-to-code.md) section shows a standardised way to transform the CDL Smart Contract view into code.
 
 
 ### The Ledger view (with Privacy overlay)
