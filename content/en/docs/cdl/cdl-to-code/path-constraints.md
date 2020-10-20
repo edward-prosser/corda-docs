@@ -19,7 +19,7 @@ tags:
 
 `PathConstraints` are used to restrict the `Path` that is allowed in a transaction. The Smart Contract defines a set of `PathConstraints` for each Primary State status, for example when in status X you can follow PathConstraint A or B, but when you are in state Y you can only follow PathConstraint C.
 
-In order to pass verification the Path in the transaction needs to comply to at least one of the allowed `PathConstraints` for the `status` of the Primary input state.
+In order to pass verification the Path in the transaction needs to comply with at least one of the allowed `PathConstraints` for the `status` of the Primary input state.
 
 PathConstraints are implemented as follows:
 
@@ -54,7 +54,7 @@ Where:
 - `outputMultiplicityConstraint` defines the range of number of outputs of Primary type that is required.
 - `additionalStatesConstraint` defines which additional states must be present in the transaction.
 
-A Path in a transactions will only be allowed by the PathConstraint if it passes all these requirements.
+A Path in a transaction will only be allowed by the PathConstraint if it passes all these requirements.
 
 `additionalStatesConstraint` are implemented as follows:
 

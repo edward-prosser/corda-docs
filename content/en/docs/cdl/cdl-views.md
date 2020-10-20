@@ -16,7 +16,7 @@ tags:
 
 CorDapp Design Language has three main views, this section explains each in turn.
 
-- [Smart contract view](cdl-smart-contract-view.md)
-- [Ledger Evolution view](cdl-ledger-evolution-view.md)
-- [Ledger Evolution - Privacy Overlay](cdl-privacy-overlay.md)
-- [BPMN view](cdl-bpmn-view.md)
+- [Smart contract view](smart-contract-view/cdl-smart-contract-view.md)
+- [Ledger Evolution view](ledger-evolution-view/cdl-ledger-evolution-view.md)
+- [Ledger Evolution - Privacy Overlay](privacy-overlay/cdl-privacy-overlay.md)
+- [BPMN view](bpmn-view/cdl-bpmn-view.md)

@@ -36,7 +36,7 @@ CDL was initially created to improve how CorDapp designs were communicated betwe
 
 As CorDapp designs became more complex, it was increasingly difficult to 'think in code'; there was too much going on to have confidence that all eventualities had been considered. As Corda transactions can represent high-value business activity where mistakes can cost material amounts of money, these considerations are especially important.
 
-With the latest version of CDL, we introduce approaches for standard implementations for CDL designs, which should further improve the reliability of CorDapps designed using CDL. See the [CDL to code](cdl-to-code.md) an d[Testing CDL code](cdl-testing.md) sections.
+With the latest version of CDL, we introduce approaches for standard implementations for CDL designs, which should further improve the reliability of CorDapps designed using CDL. See the [CDL to code](cdl-to-code/cdl-to-code.md) an d[Testing CDL code](testing/cdl-testing.md) sections.
 
 We also have an example implementation of the Agreement Smart Contract that we will develop as we explain each of the CDL views, this can be found in the [corda/cdl-example](https://github.com/corda/cdl-example) repo. Although it is important to stress this is for guidance only and does not represent an R3 product, or code that should be relied on in production.
 
@@ -82,11 +82,11 @@ This view is conceptually modelled on a Finite State Machine. The classic exampl
 For simple CorDapp Smart Contracts, there may only be one, implicit status. The Smart Contract view can still be used to communicate the design, it just devolves down to a diagram with only one state box. See the CashState Example in the previous sections.
 
 
-A detailed explanation of the elements which make up the Smart Contract view can be found [here](cdl-smart-contract-view.md)
+A detailed explanation of the elements which make up the Smart Contract view can be found [here](smart-contract-view/cdl-smart-contract-view.md)
 
 A Lucidchart template with the CDL Smart Contract view standard shapes can be found here ** add link **
 
-In addition, the section [CDL to Code](cdl-to-code.md) section shows a standardised way to transform the CDL Smart Contract view into code.
+In addition, the section [CDL to Code](cdl-to-code/cdl-to-code.md) section shows a standardised way to transform the CDL Smart Contract view into code.
 
 
 ### The Ledger view (with Privacy overlay)
@@ -109,7 +109,7 @@ The Ledger view also has an additional Privacy overlay represented as the purple
 With this view, you have insight on privacy from the design phase. An unintended privacy leak can be a show stopper for a CorDapp. It's best to consider this early on, not at the point where the customers Infosec team won't sign off the deployment.
 
 
-A detailed explanation of the elements which make up the Ledger Evolution view can be found [here](cdl-ledger-evolution-view.md)
+A detailed explanation of the elements which make up the Ledger Evolution view can be found [here](ledger-evolution-view/cdl-ledger-evolution-view.md)
 
 A Lucidchart template with the CDL Ledger view standard shapes can be found here ** add link **
 
@@ -130,7 +130,7 @@ The notation follows BPMN v2 standards, with a few small additions:
 
 Lucidchart has a standard Shapes library for BPMN 2.0 diagrams
 
-A detailed explanation of the elements which make up the BPM view can be found [here](cdl-bpmn-view.md)
+A detailed explanation of the elements which make up the BPM view can be found [here](bpmn-view/cdl-bpmn-view.md)
 
 ## CDL use case example: Smart Contract view
 

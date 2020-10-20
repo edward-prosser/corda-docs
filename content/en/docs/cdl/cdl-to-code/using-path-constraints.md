@@ -63,5 +63,5 @@ ContractUtils.kt:
 {{% /tab %}}
 {{< /tabs >}}
 
-Because a lot of the heavy lifting has be moved to the `ContractUtils.kt`, this pattern can be replicated for other Smart Contracts by substituting in the specific Statuses and the PathConstraints.
+Because a lot of the heavy lifting has been moved to the `ContractUtils.kt`, this pattern can be replicated for other Smart Contracts by substituting in the specific Statuses and the PathConstraints.
 

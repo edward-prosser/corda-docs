@@ -29,7 +29,7 @@ In ContractUtils we define the interfaces for `StatusState` and `Status`:
 /**
  * The StatusState interface should be implemented for all [ContractState]s that require a status field.
  *
- * [status] is nullable so that when there is no input or output state in a transaction, it can
+ * [status] is nullable so that when there is no input or output state in a transaction, the status can be represented as [null]
  *
  */
 interface StatusState: ContractState {
@@ -58,7 +58,7 @@ AgreementState.kt:
 {{% tab name="kotlin" %}}
 ```kotlin
 @BelongsToContract(AgreementContract::class)
-data class AgreementState(override val status: AgreementStatus,
+data class AgreementState(override val status: AgreementStatus?,
                           val buyer: Party,
                           val seller: Party,
                           val goods: String,
