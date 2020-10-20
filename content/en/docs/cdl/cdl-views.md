@@ -4,7 +4,7 @@ date: 2020-10-15T00:00:00+01:00
 menu:
   cordapp-design-language:
     identifier: cdl-views
-    weight: 14
+    weight: 20
 
 tags:
 - this
@@ -14,6 +14,9 @@ tags:
 
 # CDL Views
 
-CorDapp Design Language has three main views, this section explains each in turn
+CorDapp Design Language has three main views, this section explains each in turn.
 
-** add links to sub pages ?? **
+- [Smart contract view](smart-contract-view/cdl-smart-contract-view.md)
+- [Ledger Evolution view](ledger-evolution-view/cdl-ledger-evolution-view.md)
+- [Ledger Evolution - Privacy Overlay](privacy-overlay/cdl-privacy-overlay.md)
+- [BPMN view](bpmn-view/cdl-bpmn-view.md)
