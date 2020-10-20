@@ -19,7 +19,7 @@ The previous sections on the CDL views provide a structured way to represent the
 
 This section will discuss a structured and systematic approach to converting the CDL Smart Contract diagrams into CorDapp Code.
 
-The examples in this section are taken from the cdl-example CorDapp located in the Corda Open Source Github repo [here] (*** add link ***)
+The examples in this section are taken from the cdl-example CorDapp located in the Corda Open Source Github repo: [corda/cdl-example](https://github.com/corda/cdl-example)
 
 {{< note >}}
 Important Caveat:

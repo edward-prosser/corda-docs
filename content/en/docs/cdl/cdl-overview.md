@@ -14,7 +14,7 @@ tags:
 
 # CorDapp Design Language (CDL)
 
-Welcome to the CorDapp Design Language Documentation. This guide will walk you through what CDL is and how to use it to effectively document, analyse, and communicate your [CorDapp](../corda-os/4.5/cordapp-overview.md) designs.
+Welcome to the CorDapp Design Language Documentation. This guide will walk you through what CDL is and how to use it to effectively document, analyse, and communicate your [CorDapp](../corda-os/4.6/cordapp-overview.md) designs.
 
 
 ## What is CorDapp Design Language?
@@ -36,7 +36,9 @@ CDL was initially created to improve how CorDapp designs were communicated betwe
 
 As CorDapp designs became more complex, it was increasingly difficult to 'think in code'; there was too much going on to have confidence that all eventualities had been considered. As Corda transactions can represent high-value business activity where mistakes can cost material amounts of money, these considerations are especially important.
 
-With the latest version of CDL, we introduce approaches for standard implementations for CDL designs, which should further improve the reliability of CorDapps designed using CDL.
+With the latest version of CDL, we introduce approaches for standard implementations for CDL designs, which should further improve the reliability of CorDapps designed using CDL. See the [CDL to code](cdl-to-code.md) an d[Testing CDL code](cdl-testing.md) sections.
+
+We also have an example implementation of the Agreement Smart Contract that we will develop as we explain each of the CDL views, this can be found in the [corda/cdl-example](https://github.com/corda/cdl-example) repo. Although it is important to stress this is for guidance only and does not represent an R3 product, or code that should be relied on in production.
 
 
 
@@ -127,6 +129,8 @@ The notation follows BPMN v2 standards, with a few small additions:
 - An optional Blue box can be added to show further salient details about the transaction, such as the name of the Flow which triggered it or the command used in the transaction.
 
 Lucidchart has a standard Shapes library for BPMN 2.0 diagrams
+
+A detailed explanation of the elements which make up the BPM view can be found [here](cdl-bpmn-view.md)
 
 ## CDL use case example: Smart Contract view
 
