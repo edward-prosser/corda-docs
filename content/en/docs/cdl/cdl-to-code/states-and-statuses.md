@@ -17,11 +17,11 @@ tags:
 
 # States and Statuses
 
-A core element of the CDL Smart Contract view is that Corda states can be in different statuses. When in different statuses there are different restrictions on the form of the state and the transitions that state can make.
+A core element of the CDL Smart Contract view is that Corda states can have different statuses. When a state has a particular status, there are different restrictions on the form of the state and the transitions that state can make.
 
-`ContractStates` which require a status property should implement the `StatusState` interface. This requires a `val status: Status?` propoerty to be implemented by the state.
+`ContractStates` which require a status property should implement the `StatusState` interface. This requires a `val status: Status?` property to be implemented by the state.
 
-In ContractUtils we define the interfaces for `StatusState` and `Status`:
+In `ContractUtils`, the interfaces for `StatusState` and `Status` are defined as follows:
 
 {{< tabs name="status interface" >}}
 {{% tab name="kotlin" %}}
@@ -46,9 +46,9 @@ interface Status
 {{% /tab %}}
 {{< /tabs >}}
 
-Note that `status` is nullable because we want to be able to represent no state as a status `null`. For example, when defining Paths allowed in transactions which have no input state we define the input status as `null` so we can map  `null` -> allowed Paths when there is no input state.
+You can see that `status` is nullable because the intention is to represent no state as a status `null`. For example, when defining Paths allowed in transactions which have no input state, you define the input status as `null` so you can map  `null` -> allowed Paths when there is no input state.
 
-We use these interfaces to define the `AgreementState` and the enum set of Statuses based on the CDL status states:
+These interfaces are used to define the `AgreementState` and the enum set of statuses based on the CDL status states:
 
 {{< figure zoom="./resources/cdl-agreement-smart-contract-statuses.png" width="1000" title="Click to zoom image in new tab/window" >}}
 
@@ -79,4 +79,3 @@ enum class AgreementStatus: Status {
 ```
 {{% /tab %}}
 {{< /tabs >}}
-

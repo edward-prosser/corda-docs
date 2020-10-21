@@ -16,7 +16,6 @@ tags:
 
 # CDL - Smart Contract View
 
-In this section we will describe the CDL Smart Contract view. We will explain what we mean by a Corda Smart Contract, how the Smart Contract view adds structure to our CorDapp designs and use an example use case to build up to the following full Smart Contract view diagram:
+In this section you can learn about the CDL Smart Contract view. You will see what is meant by a Corda Smart Contract, how the Smart Contract view adds structure to your CorDapp designs, and use an example use case to build up to the following full Smart Contract view diagram:
 
 {{< figure zoom="../resources/cdl-agreement-smart-contract-full.png" width="1000" title="Click to zoom image in new tab/window" >}}
-

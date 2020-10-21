@@ -16,18 +16,8 @@ tags:
 
 # CDL - Ledger Evolution View
 
-In this section we will build up a description of the CDL Ledger Evolution view.
+The Ledger Evolution view shows a sequence of ledger transactions involving the Primary States which conform to the constraints defined in the Smart Contract. You can think of this view as a way of seeing a Smart Contract *in action*. You can use it to bring a Smart Contract to life by telling a story about how it might be used. 
 
-The Ledger Evolution view can be though of as seeing a Smart Contract 'in action'. It can be a great tool for bringing a Smart Contract to life by telling a story about how it might be used. It shows a sequence of ledger transactions involving the Primary States which conform to the constraints defined in the Smart Contract.
-
-For example, a Ledger Evolution diagram for our agreement example Smart Contract might look like this:
+For example, a Ledger Evolution diagram for your agreement example Smart Contract might look like this:
 
 {{< figure zoom="../resources/cdl-agreement-ledger-evolution-full.png" width="1000" title="Click to zoom image in new tab/window" >}}
-
-
-
-
-
-
-
-

@@ -32,5 +32,5 @@ So if the actions that a Smart Contract user can take needs to be limited, which
 The structure provided by CDL aims to help the Smart Contract designer make sure there are no 'Holes in the Fence' which unwanted behaviour can slip through.
 
 {{< note >}}
-Note: In most CorDapps the actions a user can take are limited by the Flows which are provided in the CorDapp. But it is important to remember that Flows can be, and to an extent are intended to be, rewritten by each Ccunterparty to suit their particular implementation requirements. The Corda guarantee of shared data and logic is only valid at the Smart Contract/ transaction level. Controls written into the Flows are by their nature not as secure as controls written into the Smart Contracts.
+In most CorDapps the actions a user can take are limited by the Flows which are provided in the CorDapp. But it is important to remember that Flows can be, and to an extent are intended to be, rewritten by each Ccunterparty to suit their particular implementation requirements. The Corda guarantee of shared data and logic is only valid at the Smart Contract/ transaction level. Controls written into the Flows are by their nature not as secure as controls written into the Smart Contracts.
 {{< /note >}}

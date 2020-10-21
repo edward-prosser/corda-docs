@@ -17,13 +17,13 @@ tags:
 
 # Signing Constraints
 
-Again, Signing constraints are also implement use a switch on the command.
+Signing constraints are implement using a switch on the command.
 
-The slight modification we will add for signing constraints is that the check which we are doing is always of the same form, i.e. does the `command.signers` contain the required signer per the CDL diagram.
+The slight modification to be added to signing constraints in this example is that the check being performed is always of the same form - does the `command.signers` contain the required signer per the CDL diagram?
 
-To make the code more efficient we will define a `checkSigners()` function for which we use a switch on `command.value` to send different arguments based on the CDL required signers for each command.
+To make the code more efficient you can define a `checkSigners()` function for which you use a switch on `command.value` to send different arguments based on the CDL required signers for each command.
 
-We also have a similar guard to `verifyLinearIDConstraints()` to ensure we only have one primary input and primary output state, which allows us to simplify the implementation.
+There is also a similar guard to `verifyLinearIDConstraints()` to ensure there is only one primary input and primary output state, which allows you to simplify the implementation.
 
 AgreementContract.kt:
 
@@ -78,4 +78,3 @@ AgreementContract.kt:
 ```
 {{% /tab %}}
 {{< /tabs >}}
-

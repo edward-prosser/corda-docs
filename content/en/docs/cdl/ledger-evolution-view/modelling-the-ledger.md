@@ -17,15 +17,16 @@ tags:
 # Modelling the Ledger
 
 The Corda Ledger can be considered as a Directed Acyclic Graph (DAG) in which:
-- States are created as outputs to a transaction
-- States are consumed as inputs to transactions
-- Commands are properties of transactions
-- Parties sign transactions
 
-We could illustrate this as follows:
+* States are created as outputs to a transaction.
+* States are consumed as inputs to transactions.
+* Commands are properties of transactions.
+* Parties sign transactions.
+
+You could illustrate this as follows:
 
 {{< figure zoom="../resources/cdl-ledger-dag.png" width="800" title="Click to zoom image in new tab/window" >}}
 
-However, it is difficult to get all the information we want to show into this format, so we will use a similar form but modify the graph's nodes to align more closely to the representations of states already introduced in the Smart Contract view.
+However, it is difficult to get all the information you may want to show into this format. To convey more information, you can use a similar form but modify the graph's nodes to align more closely to the representations of states already introduced in the Smart Contract view.
 
-We will also not show the signers to the transaction as separate nodes, instead we will just attach them to the transactions directly.
+In the following examples, the diagrams do not show the signers to the transaction as separate nodes, instead they are attached to the transactions directly.

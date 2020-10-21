@@ -17,16 +17,16 @@ tags:
 
 # Corda Smart Contracts
 
-First things first, 'Smart Contract' is a term that is often used in the distributed ledger/ blockchain space but not often used in the context of discussing Corda. Corda has the building blocks of other blockchains' Smart Contracts but they are chopped up and split into different parts:
+'Smart Contract' is a term that is often used in the distributed ledger/ blockchain space but not often used in the context of discussing Corda. Corda has the building blocks of other blockchains' Smart Contracts, but they are chopped up and split into different parts:
 
-- The data of a Smart Contract is stored in the ContractStates on ledger.
-- The functions or things you can do to that data are defined in the Contract.
-- The way which those functions are enacted is via building new transactions in the Flows which uses the states and conform to the Corda Contracts.
+* The data of a Smart Contract is stored in the ContractStates on ledger.
+* The functions or things you can do to that data are defined in the Contract.
+* The way which those functions are enacted is via building new transactions in the Flows which uses the states and conform to the Corda Contracts.
 
-So its all there, but not in a neat encapsulated package. Which is a good thing because this approach actually leads to a great deal of flexibility. For example, the Flows are not just limited to enacting a transition on the Ledger, they are a powerful messaging framework which allows you to send anything you like to counterparties with confidence.
+So it's all there, but not in a neat encapsulated package. This is an intended benefit because this approach leads to a great deal of flexibility. For example, the flows are not limited to enacting a transition on the Ledger, they are a powerful messaging framework which allows you to confidently send anything you like to counterparties.
 
-For the purposes of CDL we are going to define a Corda Smart Contract as the combination of one or more types of ContractState which are constrained by a Corda Contract. We'll leave the Flows out of it as we are agnostic as to how the transactions get built up: we will only concern ourselves with the validity of the final transaction.
+For the purposes of CDL you will see how to define a Corda Smart Contract as the combination of one or more types of `ContractState` which are constrained by a Corda Contract. The flows are not included in this process as you can be agnostic as to how the transactions get built up: you only need to concern yourself with the validity of the final transaction.
 
-So our Smart Contracts are basically a combination of data (ContractStates) and what we're allowed to do with it (Contracts).
+So, Corda smart contracts are basically a combination of data (ContractStates) and what a party is permitted to do with it (Contracts).
 
-When we draw a Smart contract view diagram we will always specify the ContractState(s) and the contract which will implement the behaviour we are articulating.
+As you follow these examples, when drawing a Smart contract view diagram, you will always specify the ContractState(s) and the contract which will implement the behaviour we are articulating.

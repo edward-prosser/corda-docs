@@ -20,8 +20,8 @@ Transaction Output states take a similar form to the Smart Contract view and are
 
 {{< figure zoom="../resources/cdl-agreement-ledger-evolution-tx1.png" width="500" title="Click to zoom image in new tab/window" >}}
 
-You will note that where as in the Smart Contract view the state boxes show the property types, in the Ledger Evolution view the state boxes show actual values for the properties.
+You can see that whereas in the Smart Contract view the state boxes show the property types, in the Ledger Evolution view the state boxes show actual values for the properties.
 
-We can also see that the participants no longer reference state properties, but have been replaced by actual Parties.
+You can also see that the participants no longer reference state properties, but have been replaced by actual Parties.
 
-In our example we can see that Alice creates and signs a transaction which outputs a PROPOSED state that: proposes to Bob that Bob sells her 'One bunch of bananas' for £10.
+In our example we can see that Alice creates and signs a transaction which outputs a **PROPOSED** state that: proposes to Bob that Bob sells her *One bunch of bananas* for £10.

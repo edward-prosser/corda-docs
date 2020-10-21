@@ -16,23 +16,23 @@ tags:
 
 # Keep It Structured
 
-The CDL Smart Contract view deliberate separates the design into a set of concerns either to do with data structures or constraints over those data structures. We can show this diagrammatically:
+The CDL Smart Contract view deliberately separates the design into a set of concerns either to do with data structures or constraints over those data structures. You can show this diagrammatically:
 
 {{< figure zoom="../resources/cdl-to-code-smart-contract-to-concerns.png" width="1000" title="Click to zoom image in new tab/window" >}}
 
-To minimise the risks of making mistakes when implementing the Smart Contract we will consider each of the concerns separately. By narrowing the focus we can gain greater confidence that each concern is implemented correctly.
+To minimise the risks of making mistakes when implementing the Smart Contract, you should consider each of the concerns separately. Narrowing the focus can give you greater confidence that each concern is implemented correctly.
 
-In our Agreement example, as implemented in the cdl-example CorDapp, the CDL concerns map to the following code structures:
+In the Agreement example, as implemented in the cdl-example CorDapp, the CDL concerns map to the following code structures:
 
 {{< figure zoom="../resources/cdl-to-code-concerns-to-structures.png" width="650" title="Click to zoom image in new tab/window" >}}
 
-Salient points are:
+You can see in this diagram that:
 
-- CDL states map to the `AgreementState`
-- `Commands` and the `verify()` functions are implemented in the `AgreementContract`
-- The CDL constraints are implemented in the `verify()` function, however...
-- The `verify()` function is too complicated to manage in one function so it is broken up in to a series of sub-verify functions each one dealing with a different CDL constraint.
-- The verification of Path constraints is more complicated than the other constraints, hence some of this has been moved out of the `verifyPathConstraints()` function and into `ContractUtils.kt`.
+* CDL states map to the `AgreementState`.
+* `Commands` and the `verify()` functions are implemented in the `AgreementContract`.
+* The CDL constraints are implemented in the `verify()` function.
+* As the `verify()` function is too complicated to manage in one function, it is broken up in to a series of sub-verify functions each one dealing with a different CDL constraint.
+* The verification of Path constraints is more complicated than the other constraints, hence some of this has been moved out of the `verifyPathConstraints()` function and into `ContractUtils.kt`.
 
 For each of the sub-verify functions we will aim for a standard structure to implement that type of constraint. The closer we can get to a standard template with the specific details of the Smart Contract being akin to configuration, the more reliable the implementation will become.
 

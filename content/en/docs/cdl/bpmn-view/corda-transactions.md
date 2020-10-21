@@ -17,14 +17,14 @@ tags:
 
 # Corda Transactions
 
-After the Buyer has decided what they would like to buy, they need to initiate a Propose Corda Transaction. We show corda transactions as a set of duplicated actions in the swim lane of each participant in the corda transaction with the corda logo in the corner.
+After the Buyer has decided what they would like to buy, they need to initiate a Propose Corda Transaction. The Corda transactions are shown as a set of duplicated actions in the swim lane of each participant involved in the Corda transaction, with the Corda logo in the corner.
 
-We join the actions with a two way dashed line. In BPMN dashed lines denote messages and are normally unidirectional. However, in the CorDapp BPMN view we want to reflect that there a series of back and forth messages which result in a finalised transaction on the ledger so we use a two way arrow.
+The actions are joined with a two way dashed line. In BPMN dashed lines denote messages and are normally unidirectional. However, in the CorDapp BPMN a two way arrow is used to reflect that there is a series of back and forth messages which result in a finalised transaction on the ledger.
 
-In addition we mark up which party initiated the transaction and annotate the message line on the Initiator end with a blue box giving more details about how thr transaction was formed, typically what flow is invoked and what the command in the transaction should be.
+The party that initiated the transaction is marked, and the message line is annotated on the Initiator end with a blue box giving more details about how the transaction was formed. This is typically what flow is invoked and what the command in the transaction should be.
 
 
 {{< figure zoom="../resources/cdl-bpmn-agreement-process-corda-transactions.png" width="1000" title="Click to zoom image in new tab/window" >}}
 
 
-In our example you can see that the Buyer will initiate the ProposeFlow to create a Propose transaction.
+In this example you can see that the Buyer will initiate the ProposeFlow to create a Propose transaction.

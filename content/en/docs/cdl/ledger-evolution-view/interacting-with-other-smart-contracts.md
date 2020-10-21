@@ -16,11 +16,9 @@ tags:
 
 # Interaction with other Smart Contracts
 
-Sometimes multiple Smart Contracts will interact with each other in a single transaction. We show this by having multiple commands, one from each Smart Contract in the transaction, then linking the relevant states for each Smart Contract to the Smart Contract's Command.
+Sometimes multiple Smart Contracts interact with each other in a single transaction. You can show this by having multiple commands, one from each Smart Contract in the transaction, then linking the relevant states for each Smart Contract to the Smart Contract's Command.
 
-Alice now wants to accept Bob's proposal, however, the Agreement Smart Contract specifies that upon the Agree Command, there must also be a BillingChip owned by the seller in the transaction. (Assume that a BillingChip is part of a separate Smart Contract which provides a mechanism for tracking cumulative usage on the network.)
-
-For our example (click to enlarge):
+In the Agreement example, Alice now wants to accept Bob's proposal, however, the Agreement Smart Contract specifies that upon the Agree Command, there must also be a BillingChip owned by the seller in the transaction. Assume that a BillingChip is part of a separate Smart Contract which provides a mechanism for tracking cumulative usage on the network. 
 
 {{< figure zoom="../resources/cdl-agreement-ledger-evolution-tx4-b.png" width="1000" title="Click to zoom image in new tab/window" >}}
 

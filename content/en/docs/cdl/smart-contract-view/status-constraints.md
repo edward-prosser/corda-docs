@@ -24,12 +24,13 @@ They are shown as a rounded box under the status state box to which the constrai
 {{< figure zoom="../resources/cdl-agreement-smart-contract-status-constraints.png" width="1000" title="Click to zoom image in new tab/window" >}}
 
 
-In our example use case we use Status constraints to show which state properties must be populated for a particular status. In particular we want to:
- - Mandate that rejectionReason and rejectedBy are set to null when in the PROPOSED status.
- - Mandate that rejectionReason and rejectedBy are filled in when in the REJECTED status.
+In the Agreement example use case, Status constraints are used to show which state properties must be populated for a particular status. In particular, the aim is to:
 
-We have not specified whether the fields should be null or populated in the AGREED status.
+* Mandate that rejectionReason and rejectedBy are set to null when in the PROPOSED status.
+* Mandate that rejectionReason and rejectedBy are filled in when in the REJECTED status.
 
- Note, when using Kotlin types, fields cannot be null unless they are marked as nullable with a '?' after the type, eg rejectionReason: String?. So there is no need to specify that a non-nullable field, eg buyer: Party must be populated, it is implied in the class type. Although in the example, we have stated it explicitly anyway.
+Whether the fields should be null or populated in the AGREED status has not been specified.
 
-
+{{ <note> }}
+When using Kotlin types, fields cannot be null unless they are marked as nullable with a '?' after the type, eg rejectionReason: String?. So there is no need to specify that a non-nullable field, eg buyer: Party must be populated, it is implied in the class type. Although in the example, we have stated it explicitly anyway.
+{{< /note >}}

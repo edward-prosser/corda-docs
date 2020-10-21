@@ -5,7 +5,7 @@ menu:
   cordapp-design-language:
     parent: cdl-to-code
     identifier: cdl-to-code-linearId-constraints
-    weight: 70
+    weight: 700
 
 tags:
 - cdl

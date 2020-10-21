@@ -16,15 +16,15 @@ tags:
 
 # Transactions, Commands and Signers
 
-We will represent transaction as a layered box:
+You can represent a transaction as a layered box. In this example:
 
-{{< figure zoom="../resources/cdl-agreement-ledger-evolution-tx1-a.png" width="250" title="Click to zoom image in new tab/window" >}}
-
-Where:
 - The top box is a space for a label for the transaction, it doesn't correspond to a property of the transaction but is useful when describing a Ledger Evolution diagram.
 - The middle green box is the command for the primary State.
 - The bottom box contains the actual signers of the transaction.
 
-If a transaction has additional commands relating to other Smart Contract operating in the transaction, then these are added as extra middle boxes.
+{{< figure zoom="../resources/cdl-agreement-ledger-evolution-tx1-a.png" width="250" title="Click to zoom image in new tab/window" >}}
+
+
+If a transaction has additional commands relating to other Smart Contract operating in the transaction, then these are added as extra middle boxes:
 
 {{< figure zoom="../resources/cdl-agreement-ledger-evolution-tx4-a.png" width="250" title="Click to zoom image in new tab/window" >}}

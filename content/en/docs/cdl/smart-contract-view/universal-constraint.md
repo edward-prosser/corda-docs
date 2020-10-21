@@ -17,7 +17,7 @@ tags:
 
 # Universal Constraints
 
-Universal Constraints are constraints over the Primary State which must be satisfied irrespective of which status the Primary State is in.
+Universal Constraints are constraints over the Primary State which must be satisfied irrespective of the status of the Primary State.
 
 They are shown as a rounded box in the top left corner of the diagram:
 

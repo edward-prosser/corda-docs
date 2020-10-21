@@ -17,13 +17,13 @@ tags:
 
 # Using Path Constraints
 
-As describe in the preceeding two sections, the classes for `Paths` and `PathConstraints` are all provided in the `ContractUtlis.kt` file, this means that the verifyPathConstraints() function is actually very simple to write.
+The classes for `Paths` and `PathConstraints` are all provided in the `ContractUtlis.kt` file, this means that the verifyPathConstraints() function is actually very simple to write:
 
-- First we use `ContractUtlis` to extract the Path from the transaction being verified.
+1. Use `ContractUtlis` to extract the Path from the transaction being verified.
 
-- Then we create `allowedPaths` which uses a when statement to map the input status to the PathConstraints that should be applied for that status.
+2. Create `allowedPaths` which uses a when statement to map the input status to the PathConstraints that should be applied for that status.
 
-- Finally, we have a single `requireThat` statement that passes the `txPath` and the `allowedPaths` to the `verifyPath()` helper function in `ContractUtils` that returns true if the path is allowed and false if it is not.
+3. You now have a single `requireThat` statement that passes the `txPath` and the `allowedPaths` to the `verifyPath()` helper function in `ContractUtils` that returns true if the path is allowed and false if it is not.
 
 ContractUtils.kt:
 
@@ -63,5 +63,4 @@ ContractUtils.kt:
 {{% /tab %}}
 {{< /tabs >}}
 
-Because a lot of the heavy lifting has been moved to the `ContractUtils.kt`, this pattern can be replicated for other Smart Contracts by substituting in the specific Statuses and the PathConstraints.
-
+Because a lot of the heavy lifting has been moved to the `ContractUtils.kt`, this pattern can be replicated for other Smart Contracts by substituting in the specific statuses and the `PathConstraints`.

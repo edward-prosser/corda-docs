@@ -17,7 +17,7 @@ tags:
 
 # Universal Constraints
 
-Universal Constraints are probably the most straight forward type of constraint, they apply to all states irrespective of what `status` they are in. The approach we take is to simply get all the Primary states, then apply all the tests to each state.
+Universal Constraints are probably the most straight forward type of constraint, they apply to all states irrespective of what `status` they are in. The approach taken here is to take all the Primary states, then apply all the tests to each state:
 
 AgreementContract.kt:
 

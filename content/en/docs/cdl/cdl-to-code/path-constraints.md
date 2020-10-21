@@ -17,9 +17,9 @@ tags:
 
 # Path Constraints
 
-`PathConstraints` are used to restrict the `Path` that is allowed in a transaction. The Smart Contract defines a set of `PathConstraints` for each Primary State status, for example when in status X you can follow PathConstraint A or B, but when you are in state Y you can only follow PathConstraint C.
+You can use `PathConstraints` to restrict the `Path` that is allowed in a transaction. The Smart Contract defines a set of `PathConstraints` for each Primary State status, for example when in status X you can follow `PathConstraint` A or B, but when you are in state Y you can only follow PathConstraint C.
 
-In order to pass verification the Path in the transaction needs to comply with at least one of the allowed `PathConstraints` for the `status` of the Primary input state.
+In order to pass verification, the Path in the transaction must comply with at least one of the allowed `PathConstraints` for the `status` of the Primary input state.
 
 PathConstraints are implemented as follows:
 
@@ -48,11 +48,11 @@ class PathConstraint<T: StatusState>(val command: CommandData,
 
 Where:
 
-- `command` is the class of the command required.
-- `outputStatus` is the outputStatus of the Primary State that is required.
-- `inputMultiplicityConstraint` defines the range of number of inputs of Primary type that is required.
-- `outputMultiplicityConstraint` defines the range of number of outputs of Primary type that is required.
-- `additionalStatesConstraint` defines which additional states must be present in the transaction.
+* `command` is the class of the command required.
+* `outputStatus` is the outputStatus of the Primary State that is required.
+* `inputMultiplicityConstraint` defines the range of number of inputs of Primary type that is required.
+* `outputMultiplicityConstraint` defines the range of number of outputs of Primary type that is required.
+* `additionalStatesConstraint` defines which additional states must be present in the transaction.
 
 A Path in a transaction will only be allowed by the PathConstraint if it passes all these requirements.
 
@@ -78,9 +78,9 @@ class AdditionalStatesConstraint(val type: AdditionalStatesType ,
 
 Where:
 
-- `type` is `INPUT`, `OUTPUT` or `REFERENCE`.
-- `statesClass` is the required type of the additional states.
-- `requiredNumberOfStates` defines how many AdditionalStates of this type are allowed using a `MultiplicityConstraint`.
+* `type` is `INPUT`, `OUTPUT` or `REFERENCE`.
+* `statesClass` is the required type of the additional states.
+* `requiredNumberOfStates` defines how many AdditionalStates of this type are allowed using a `MultiplicityConstraint`.
 
 MultiplicityConstraint are defined as follows:
 
@@ -104,9 +104,9 @@ class MultiplicityConstraint(val from: Int = 1,
 
 Where:
 
-- `from` is the minimum number of states.
-- `bounded` specifies if there is an upper limit.
-- `upperbound` specifies the upper bound, which is only applied if bounded is true.
+* `from` is the minimum number of states.
+* `bounded` specifies if there is an upper limit.
+* `upperbound` specifies the upper bound, which is only applied if bounded is true.
 
 Note, the structure above allows for quite complex definition of what is allowed, in most cases these won't be needed. To simplify the use of PathConstraints most properties are defaulted. So for example you can specify a Path constraint simply as:
 
@@ -121,9 +121,9 @@ PathConstraint(Commands.Reject(), REJECTED)
 
 Which would default to:
 
-- 1 Input of Primary State type
-- 1 output Primary State type
-- no additional states required
+* 1 Input of Primary State type.
+* 1 output Primary State type.
+* No additional states required.
 
 Or they could get much more complicated as in this example from the `ContractUtils` test scripts:
 

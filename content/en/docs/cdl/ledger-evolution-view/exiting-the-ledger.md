@@ -17,7 +17,7 @@ tags:
 
 # Exiting the ledger
 
-Our example is nearly complete, we need the final transaction created and signed by Bob to remove the Agreed state from the Ledger using a Complete command.
+The example is nearly complete, we need the final transaction created and signed by Bob to remove the Agreed state from the Ledger using a Complete command.
 
 {{< figure zoom="../resources/cdl-agreement-ledger-evolution-tx5.png" width="1000" title="Click to zoom image in new tab/window" >}}
 

@@ -17,9 +17,11 @@ tags:
 
 # Command Constraints
 
-Command constraints are also implemented using a switch on the command.
+Command constraints are implemented using a switch on the command.
 
-In this case we want to ensure that we have good structure in the code so we will have a `when` case for every possible value of the `command.value`. In the cases of `Propose`, `Repropose` and `Complete` commands, there is no command constraint specified in the CDL. We will explicitly show there is no check to be done by leaving the case block blank `{}` because it is better to ensure there is a complete set of cases rather than risk missing one out.
+This is to ensure that you have good structure in the code so, you will have a `when` case for every possible value of the `command.value`. In the cases of `Propose`, `Repropose` and `Complete` commands, there is no command constraint specified in the CDL.
+
+You can explicitly show there is no check to be done by leaving the case block blank `{}` because it is better to ensure there is a complete set of cases rather than risk missing one out.
 
 AgreementContract.kt:
 
@@ -62,4 +64,3 @@ AgreementContract.kt:
 ```
 {{% /tab %}}
 {{< /tabs >}}
-

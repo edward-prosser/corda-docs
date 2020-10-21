@@ -18,7 +18,7 @@ tags:
 
 # Full diagram
 
-We now have almost all the components needed to complete the full BPMN diagram. We need to add an end event, this is represented as a thick circle and usually labled as 'End'
+Now that almost all the components needed to complete the full BPMN diagram are in place. You need to add an end event, this is represented as a thick circle and usually labled as 'End'.
 
 The full diagram looks as follows:
 
@@ -26,7 +26,6 @@ The full diagram looks as follows:
 
 You can trace a number of different scenarios depending on the decisions that each of the participants takes.
 
-Note: To aid understanding of the BPMN View, this diagram is slightly simplified as it does not show the option for the proposer to reject their own proposal if they change their mind, which is something they can do in the Smart Contract.
-
-
-
+{{< note >}}
+To aid understanding of the BPMN View, this diagram is slightly simplified as it does not show the option for the proposer to reject their own proposal if they change their mind, which is something they can do in the Smart Contract.
+{{< /note >}}
