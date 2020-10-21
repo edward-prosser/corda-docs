@@ -3,8 +3,8 @@ title: CDL Views
 date: 2020-10-15T00:00:00+01:00
 menu:
   cdl:
-    identifier: cdl-views
-    name: CDL views
+    identifier: "cdl-views"
+    name: "CDL views"
     weight: 200
 tags:
 - this

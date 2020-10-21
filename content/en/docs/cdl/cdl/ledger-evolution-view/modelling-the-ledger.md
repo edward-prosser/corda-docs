@@ -3,8 +3,8 @@ title: Modelling the ledger
 date: 2020-10-15T00:00:00+01:00
 menu:
   cordapp-design-language:
-    parent: cdl-ledger-evolution-view
-    identifier: cdl-ledger-evolution-view-modelling-the-ledger
+    parent: "cdl-ledger-evolution-view"
+    identifier: "cdl-ledger-evolution-view-modelling-the-ledger"
     weight: 10
 
 tags:

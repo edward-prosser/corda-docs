@@ -3,8 +3,8 @@ title: Multiplicities
 date: 2020-10-15T00:00:00+01:00
 menu:
   cordapp-design-language:
-    parent: cdl-smart-contract-view
-    identifier: cdl-smart-contract-view-multiplicities
+    parent: "cdl-smart-contract-view"
+    identifier: "cdl-smart-contract-view-multiplicities"
     weight: 100
 
 tags:

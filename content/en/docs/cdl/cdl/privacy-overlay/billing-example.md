@@ -3,8 +3,8 @@ title: Billing example
 date: 2020-10-15T00:00:00+01:00
 menu:
   cordapp-design-language:
-    parent: cdl-privacy-overlay
-    identifier: cdl-privacy-overlay-billing-example
+    parent: "cdl-privacy-overlay"
+    identifier: "cdl-privacy-overlay-billing-example"
     weight: 20
 
 tags:
@@ -46,4 +46,4 @@ You can then show what happens when the same billing token is used in another Ag
 
 {{< figure zoom="../resources/cdl-agreement-naive-billing-ledger-evolution-tx4-b.png" width="1000" title="Click to zoom image in new tab/window" >}}
 
-The next step is to add the privacy overlay. 
+The next step is to add the privacy overlay.

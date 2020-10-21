@@ -3,8 +3,8 @@ title: Path constraints
 date: 2020-10-15T00:00:00+01:00
 menu:
   cordapp-design-language:
-    parent: cdl-to-code
-    identifier: cdl-to-code-path-constraints
+    parent: "cdl-to-code"
+    identifier: "cdl-to-code-path-constraints"
     weight: 110
 
 tags:

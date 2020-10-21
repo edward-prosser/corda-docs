@@ -3,8 +3,8 @@ title: Adding structure with CDL
 date: 2020-10-15T00:00:00+01:00
 menu:
   cordapp-design-language:
-    parent: cdl-smart-contract-view
-    identifier: cdl-smart-contract-view-adding-structure
+    parent: "cdl-smart-contract-view"
+    identifier: "cdl-smart-contract-view-adding-structure"
     weight: 30
 
 tags:
@@ -29,6 +29,6 @@ The way the abstraction works is to split the elements of the Smart Contract des
 * Who are the participants for each status?
 * How can I move between each status?
 
-By splitting the design process into these different predefined considerations, you can add structure and robustness to your design thinking. Providing a standardised way to represent each of these considerations in a neat single-page view further empowers you to communicate and reason about the design. 
+By splitting the design process into these different predefined considerations, you can add structure and robustness to your design thinking. Providing a standardised way to represent each of these considerations in a neat single-page view further empowers you to communicate and reason about the design.
 
 Defining standardised ways to implement and test each consideration can increase confidence in the faithful implementation of the design.

@@ -3,8 +3,8 @@ title: Reference states
 date: 2020-10-15T00:00:00+01:00
 menu:
   cordapp-design-language:
-    parent: cdl-ledger-evolution-view
-    identifier: cdl-ledger-evolution-view-reference-states
+    parent: "cdl-ledger-evolution-view"
+    identifier: "cdl-ledger-evolution-view-reference-states"
     weight: 60
 
 tags:

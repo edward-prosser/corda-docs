@@ -3,8 +3,8 @@ title: Adding the Privacy Overlay
 date: 2020-10-15T00:00:00+01:00
 menu:
   cordapp-design-language:
-    parent: cdl-privacy-overlay
-    identifier: cdl-privacy-overlay-adding-the-privacy-overlay
+    parent: "cdl-privacy-overlay"
+    identifier: "cdl-privacy-overlay-adding-the-privacy-overlay"
     weight: 30
 
 tags:

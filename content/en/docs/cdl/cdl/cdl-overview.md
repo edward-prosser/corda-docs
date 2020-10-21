@@ -3,8 +3,8 @@ title: "CDL Overview"
 date: 2020-10-15T00:00:00+01:00
 menu:
   cdl:
-    identifier: cdl-overview
-    name: CorDapp Design Language (CDL) overview
+    identifier: "cdl-overview"
+    name: "CorDapp Design Language (CDL) overview"
     weight: 100
 tags:
 - Designing CorDapps
@@ -14,13 +14,18 @@ tags:
 
 # CorDapp Design Language (CDL) overview
 
-Welcome to the CorDapp Design Language (CDL) documentation. Use this guide to discover what CDL is and it can help you effectively document, analyse, and communicate your [CorDapp](https://docs.corda.net/docs/corda-os/cordapp-overview.html)
 
-As Corda transactions can represent high-value business activity, where mistakes can cost material amounts of money, a way to structure and organise your design becomes increasingly important. The CDL exists to give you confidence that all design eventualities had been considered as you create your CorDapps.
+CorDapp Design Language (CDL) is a set of diagrammatic views you can use to concisely and accurately guide the design of your CorDapp. Using CDL in the design phase of your CorDapp allows you to:
 
-### Who the CDL is for
+* Represent and reason about core aspects of the Corda design including: Ledger data, shared Logic, permissioning, and privacy.
+* Reason about more complex CorDapp designs through abstraction from the code and standardisation.
+* Produce complete, well thought-out CorDapp designs.
+* Document standardised design patterns.
+* Degrade gracefully. You don't always have to put in all the detail, but it should be self-consistent at the level of detail you choose.
 
-CorDapp Design Language is for anyone who wants to be able to articulate and understand non-trivial CorDapp designs. This may include:
+## Who should use the CDL
+
+CorDapp Design Language is for anyone who wants to articulate and understand non-trivial CorDapp designs. This may include:
 
 * CorDapp Architects.
 * CorDapp Developers.
@@ -31,16 +36,6 @@ CorDapp Design Language is for anyone who wants to be able to articulate and und
 * Technical Auditors.
 
 It can also be used to communicate to non-technical audiences, for example in marketing materials, though most likely in a simplified form.
-
-## What is CorDapp Design Language?
-
-CorDapp Design Language (CDL) is a set of diagrammatic views you can use to concisely and accurately guide the design of your CorDapp. Using CDL in the design phase of your CorDapp allows you to:
-
-* Represent and reason about core aspects of the Corda design including: Ledger data, shared Logic, permissioning, and privacy.
-* Reason about more complex CorDapp designs through abstraction from the code and standardisation.
-* Produce complete, well thought-out CorDapp designs.
-* Document standardised design patterns.
-* Degrade gracefully. You don't always have to put in all the detail, but it should be self-consistent at the level of detail you choose.
 
 ## Introducing the main CDL views
 
@@ -74,10 +69,13 @@ This view is conceptually modelled on a Finite State Machine. The classic exampl
 
 For simple CorDapp smart contracts, there may only be one, implicit status. The Smart Contract view can still be used to communicate the design, it just devolves down to a diagram with only one state box. See the CashState Example in the previous sections.
 
-
 A detailed explanation of the elements which make up the Smart Contract view can be found [here](smart-contract-view/cdl-smart-contract-view.md)
 
-A Lucidchart template with the CDL Smart Contract view standard shapes can be found here ** add link **
+A Lucidchart template with the CDL Smart Contract view standard shapes [can be found here](https://app.lucidchart.com/invitations/accept/6adacd29-482f-45ca-9bdd-57252d64c8fc).
+
+{{< note >}}
+You need an active Lucidchart accound to access this folder.
+{{< /note >}}
 
 In addition, the section [CDL to Code](cdl-to-code/cdl-to-code.md) section shows a standardised way to transform the CDL Smart Contract view into code.
 
@@ -115,13 +113,13 @@ An example BPMN view:
 
 The notation follows BPMN v2 standards, with a few small additions:
 
-- Where a Corda transaction is written to the ledger, this is represented as a simultaneous task/action on the swim lane of every participant to the transaction. Each state is marked with a small Corda logo.
-- The initiator of the transaction should be indicated on the version of the action that appears in the initiator's swim lane.
-- An optional Blue box can be added to show further salient details about the transaction, such as the name of the Flow which triggered it or the command used in the transaction.
+* Where a Corda transaction is written to the ledger, this is represented as a simultaneous task/action on the swim lane of every participant to the transaction. Each state is marked with a small Corda logo.
+* The initiator of the transaction should be indicated on the version of the action that appears in the initiator's swim lane.
+* An optional Blue box can be added to show further salient details about the transaction, such as the name of the Flow which triggered it or the command used in the transaction.
 
-Lucidchart has a standard Shapes library for BPMN 2.0 diagrams
+Lucidchart has a standard Shapes library for BPMN 2.0 diagrams.
 
-A detailed explanation of the elements which make up the BPM view can be found [here](bpmn-view/cdl-bpmn-view.md)
+A detailed explanation of the elements which make up the BPM view can be found [here](bpmn-view/cdl-bpmn-view.md).
 
 ## CDL use case example: Smart Contract view
 
