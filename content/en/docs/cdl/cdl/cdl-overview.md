@@ -2,19 +2,19 @@
 title: "CDL Overview"
 date: 2020-10-15T00:00:00+01:00
 menu:
-    CorDapp-design-language:
-      identifier: cdl-overview
-      weight: 10
-
+  cdl:
+    identifier: cdl-overview
+    name: CorDapp Design Language (CDL) overview
+    weight: 100
 tags:
 - Designing CorDapps
 - CDL
 - Corda design language
 ---
 
-# CorDapp Design Language
+# CorDapp Design Language (CDL) overview
 
-Welcome to the CorDapp Design Language (CDL) Documentation. Use this guide to discover what CDL is and it can help you effectively document, analyse, and communicate your [CorDapp](../corda-os/4.6/cordapp-overview.md) designs.
+Welcome to the CorDapp Design Language (CDL) documentation. Use this guide to discover what CDL is and it can help you effectively document, analyse, and communicate your [CorDapp](https://docs.corda.net/docs/corda-os/cordapp-overview.html)
 
 As Corda transactions can represent high-value business activity, where mistakes can cost material amounts of money, a way to structure and organise your design becomes increasingly important. The CDL exists to give you confidence that all design eventualities had been considered as you create your CorDapps.
 

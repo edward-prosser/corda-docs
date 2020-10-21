@@ -2,17 +2,17 @@
 title: CDL Views
 date: 2020-10-15T00:00:00+01:00
 menu:
-  cordapp-design-language:
+  cdl:
     identifier: cdl-views
-    weight: 20
-
+    name: CDL views
+    weight: 200
 tags:
 - this
 - that
 - the other
 ---
 
-# CDL Views
+# CorDapp Design Language (CDL) views
 
 CorDapp Design Language has three main views, along with a privacy overlay for the Ledger Evolution view, this section explains each in turn:
 

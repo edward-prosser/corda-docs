@@ -31,6 +31,6 @@ In the Agreement example use case, Status constraints are used to show which sta
 
 Whether the fields should be null or populated in the AGREED status has not been specified.
 
-{{ <note> }}
+{{< note >}}
 When using Kotlin types, fields cannot be null unless they are marked as nullable with a '?' after the type, eg rejectionReason: String?. So there is no need to specify that a non-nullable field, eg buyer: Party must be populated, it is implied in the class type. Although in the example, we have stated it explicitly anyway.
 {{< /note >}}
