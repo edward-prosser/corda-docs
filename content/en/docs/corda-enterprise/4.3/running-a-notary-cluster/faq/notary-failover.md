@@ -20,7 +20,7 @@ Corda has built in features that would retry flows on specific cases of failure.
 
 The FinalityFlow contains notary specific logic which can initiate a backpressure-aware subflow since minimum platform version 4.
 The backpressure aware subflow has configured timeout and retry with specific logic relating
-to the [ETA mechanism](eta-mechanism.md).
+to the [backpressure mechanism](eta-mechanism.md).
 
 ## How does the timeout work?
 

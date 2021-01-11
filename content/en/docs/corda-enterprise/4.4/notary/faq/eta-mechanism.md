@@ -11,7 +11,7 @@ menu:
     parent: corda-enterprise-4-4-running-a-notary-cluster-faq-toctree
 tags:
 - notary
-- ETA mechanism
+- backpressure mechanism
 - etaMessageThresholdSeconds
 title: ETA Mechanism Overview
 weight: 1
@@ -48,7 +48,7 @@ too eagerly prevents the notary from running at peak throughput.
 If a Corda node is told to wait, its state machine will handle the wait and nothing will be visible to the CorDapp.
 Even if a client runs a modified Corda node he’ll get cut off by the ETA once again and hardly see any benefit.
 While the ETA can hardly be accurate, it is a close approximation of the time when response will arrive.
-The ETA mechanism is in place to maximize the throughput of the notary service assuming clients wait before retrying
+The backpressure mechanism is in place to maximize the throughput of the notary service assuming clients wait before retrying
 their requests as intended.
 
 

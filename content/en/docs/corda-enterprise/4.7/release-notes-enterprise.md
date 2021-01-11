@@ -62,7 +62,7 @@ See the [Archiving Service documentation section](node/archiving/archiving-setup
 
 ### Improved notary backpressure (ETA) mechanism
 
-To optimise the way notaries handle traffic, we have updated the notary backpressure mechanism (also referred to as [ETA mechanism](notary/faq/eta-mechanism.md#what-is-the-eta-mechanism)) to improve notary performance when there is a sudden increase in notarisation requests. This change increases the accuracy of transaction retry estimates that the notary provides to the node.
+To optimise the way notaries handle traffic, we have updated the notary backpressure mechanism (also referred to as [backpressure mechanism](notary/faq/eta-mechanism.md#what-is-the-eta-mechanism)) to improve notary performance when there is a sudden increase in notarisation requests. This change increases the accuracy of transaction retry estimates that the notary provides to the node.
 
 As a result, the notary backpressure mechanism is now [more precise and responsive](notary/notary-load-handling.md) under "heavy traffic conditions", which leads to fewer node retries, optimised performance, and a better end-user experience for node operators.
 
