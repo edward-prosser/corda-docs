@@ -1,5 +1,5 @@
 {
-    "index_name": "docs.corda.net",
+    "index_name": "banks.corda.net",
     "start_urls": [
         {
             "url": "https://docs.corda.net/docs/apps/(?P<app>.*?)/",
