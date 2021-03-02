@@ -2,7 +2,7 @@
     "index_name": "banks.corda.net",
     "start_urls": [
         {
-            "url": "https://docs.corda.net/docs/apps/(?P<app>.*?)/",
+            "url": "https://banks.corda.net/docs/apps/(?P<app>.*?)/",
             "tags": [
                 "apps"
             ],
@@ -14,7 +14,7 @@
             }
         },
         {
-            "url": "https://docs.corda.net/docs/(?P<project>.*?)/",
+            "url": "https://banks.corda.net/docs/(?P<project>.*?)/",
             "tags": [
                 "projects"
             ],
@@ -33,7 +33,7 @@
     ],
     "scrape_start_urls": false,
     "sitemap_urls": [
-        "https://docs.corda.net/sitemap.xml"
+        "https://banks.corda.net/sitemap.xml"
     ],
     "selectors": {
         "default": {
