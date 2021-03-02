@@ -8,7 +8,7 @@
             ],
             "variables": {
                 "app": [
-                    "bankinabox"
+                    "bankinabox",
                     "payments"
                 ]
             }
