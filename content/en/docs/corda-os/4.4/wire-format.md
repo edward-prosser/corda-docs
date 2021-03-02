@@ -4,6 +4,8 @@ aliases:
 - /HEAD/wire-format.html
 - /wire-format.html
 - /releases/release-V4.4/wire-format.html
+- /docs/corda-os/head/wire-format.html
+- /docs/corda-os/wire-format.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-os-4-4:
@@ -238,7 +240,7 @@ The list type will be defined as a restricted type, like so:
 * Label: NULL
 * Provides: []
 * Source: “list”
-* 
+*
 * Symbol: net.corda:2A8U5kaXW/lD5ns+l0xPFg==
 * Numeric: NULL
 
@@ -307,21 +309,21 @@ envelope [
                          0. net.corda:KwaBqNRsTDOaXBrYdtDZpw== [
                                        0. net.corda:c0Lkwk4E63sshTPr2G60aQ== [
                                 0. net.corda:zjQ3JQXiArQUxXuCcaWANw== [
-                                              0. "Mike"
+                                              0. "John"
                                           ]
-                                              1. "Hearn"
+                                              1. "Doe"
                                    ]
                                        0. net.corda:c0Lkwk4E63sshTPr2G60aQ== [
                                 1. net.corda:zjQ3JQXiArQUxXuCcaWANw== [
-                                              0. "Richard"
+                                              0. "Jane"
                                           ]
-                                              1. "Brown"
+                                              1. "Doe"
                                    ]
                                        0. net.corda:c0Lkwk4E63sshTPr2G60aQ== [
                                 2. net.corda:zjQ3JQXiArQUxXuCcaWANw== [
-                                              0. "James"
+                                              0. "Alice"
                                           ]
-                                              1. "Carlyle"
+                                              1. "Doe"
                                    ]
                             ]
                          1. "Platform"
@@ -332,7 +334,7 @@ envelope [
                       0. 1411596660: long
                       1. 0: int
                   ]
-                  "Hired Mike" -> net.corda:java.time.Instant [
+                  "Hired John" -> net.corda:java.time.Instant [
                       0. 1446552000: long
                       1. 0: int
                   ]
@@ -543,4 +545,3 @@ envelope [
        }
 ]
 ```
-

@@ -4,6 +4,8 @@ aliases:
 - /HEAD/cordapp-overview.html
 - /cordapp-overview.html
 - /releases/release-V4.4/cordapp-overview.html
+- /docs/corda-os/head/cordapp-overview.html
+- /docs/corda-os/cordapp-overview.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-os-4-4:
@@ -24,6 +26,10 @@ CorDapp is to allow nodes to reach agreement on updates to the ledger. They achi
 Corda node owners can invoke over RPC:
 
 ![node diagram](/en/images/node-diagram.png "node diagram")
+
+{{< note >}}
+When designing your CorDapp, you may want to consider using the [CorDapp Design Language](/docs/cdl/cdl/cdl-overview) to structure and organise your designs. This can be especially helpful for complex CorDapps.
+{{< /note >}}
 
 ## CorDapp components
 
@@ -58,7 +64,7 @@ the following components:
 
 * A `BondState`, used to represent bonds as shared facts on the ledger
 * A `BondContract`, used to govern which ledger updates involving `BondState` states are valid
-* Three flows:> 
+* Three flows:
 
     * An `IssueBondFlow`, allowing new `BondState` states to be issued onto the ledger
     * A `TradeBondFlow`, allowing existing `BondState` states to be bought and sold on the ledger
@@ -108,4 +114,3 @@ to run on Corda Enterprise should have unit and integration tests using Corda En
 
 In summary, structure your app as kernel (contracts, states, dependencies) and workflow (the rest) and be sure to compile the kernel
 against Corda open source. You can compile your workflow (Jars) against the distribution of Corda that they target.
-

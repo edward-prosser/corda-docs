@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/release-1.2/quick-start.html
+- /docs/cenm/head/quick-start.html
+- /docs/cenm/quick-start.html
 date: '2020-01-08T09:59:25Z'
 menu:
   cenm-1-2:
@@ -180,8 +182,6 @@ workflows {
 
 ```
 
-[identity-manager-test-minimum-valid.conf](https://github.com/corda/network-services/blob/release/1.2/services/src/test/resources/v1.1-configs/identity-manager/identity-manager-test-minimum-valid.conf)
-
 {{< note >}}
 The example uses a local h2 database. You can modify this to point to an separate DB instance by modifying the
 `database` section. See the “Database properties” section of [Identity Manager Service](identity-manager.md) for more
@@ -321,8 +321,6 @@ pollingInterval = 10000
 checkRevocation = false
 
 ```
-
-[network-map-test-minimum-valid.conf](https://github.com/corda/network-services/blob/release/1.2/services/src/test/resources/v1.1-configs/network-map/network-map-test-minimum-valid.conf)
 
 {{< note >}}
 The example uses a local h2 database. You can modify this to point to an separate DB instance by modifying the
@@ -474,4 +472,3 @@ Deduced Identity Manager service from provided config file...
 Binding Shell SSHD server on port <SHELL_PORT>
 Network management web services started on <IDENTITY_MANAGER_ADDRESS> with [RegistrationWebService, CertificateRevocationWebService, MonitoringWebService]
 ```
-

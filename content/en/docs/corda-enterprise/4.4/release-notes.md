@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/release-notes.html
+- /docs/corda-enterprise/head/release-notes.html
+- /docs/corda-enterprise/release-notes.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -9,15 +11,14 @@ tags:
 - release
 - notes
 title: Corda release notes
+weight: 30
 ---
 
 
 # Corda release notes
 
 
-Welcome to the Corda 4.4 release notes. Please read these carefully to understand what’s new in this release and how the features can help you. Just as prior releases have brought with them commitments to wire and API stability, Corda 4.4 comes with those same guarantees. States and apps valid in Corda 3.0 are usable in Corda 4.4.
-
-
+Welcome to the Corda 4.4 release notes. Please read these carefully to understand what’s new in this release, and how the features can help you. Just as prior releases have brought with them commitments to wire and API stability, Corda 4.4 comes with those same guarantees. States and apps valid in Corda 3.0 are usable in Corda 4.4.
 
 ## Corda 4.4
 
@@ -90,7 +91,9 @@ Some of your existing integration tests might implicitly be relying on the prese
 
 Given the addition of new APIs, the platform version of Corda 4.4 has been bumped up from 5 to 6. This is to prevent CorDapps that use it being deployed onto nodes unable to host them. Note that the minimum platform version has not been changed - this means that older Corda nodes can still interoperate with Corda 4.4 nodes. Since the APIs added do not affect the wire protocol or have other zone-level implications, applications can take advantage of these new platform version 6 features even if the Corda 4.4 node is running on a network whose minimum platform version is 4.
 
-For more information on platform version, please see versioning. For more details on upgrading a CorDapp to use platform version 5, please see [Upgrading CorDapps to newer Platform Versions](app-upgrade-notes.md).
+For more information on platform version, please see [Versioning](../../corda-os/4.4/versioning.md).
+
+For more details on upgrading a CorDapp to use platform version 5, please see [Upgrading CorDapps to newer Platform Versions](app-upgrade-notes.md).
 
 
 ### Known Issues
@@ -425,7 +428,7 @@ of tools Corda offers. Now, following the release of Corda Enterprise 4.0, we ar
 and documentation updates to bring additional stability and quality of life improvements to those developing on the Corda platform.
 
 Information on Corda Enterprise 4.0 can be found [here](https://www.r3.com/wp-content/uploads/2019/05/CordaEnterprise4_Enhancements_FS.pdf) and
-[here](https://docs.corda.r3.com/releases/4.0/release-notes.md). (It’s worth noting that normally this document would have started with a comment
+[here](https://docs.corda.net/docs/corda-enterprise/4.0/release-notes-enterprise.html). (It’s worth noting that normally this document would have started with a comment
 about whether or not you’d been recently domiciled under some solidified mineral material regarding the release of Corda Enterprise 4.0. Alas, we made
 that joke when we shipped the first release of Corda after Enterprise 3.0 shipped, so the thunder has been stolen and repeating ourselves would be terribly gauche.)
 
@@ -895,4 +898,3 @@ will have no impact on any deployed configurations.
 To learn more about smaller changes, please read the [Changelog](changelog.md).
 
 Finally, we have added some new jokes. Thank you and good night!
-

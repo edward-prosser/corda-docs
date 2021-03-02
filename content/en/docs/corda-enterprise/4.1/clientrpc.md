@@ -119,7 +119,7 @@ class ClientRpcExample {
 
 
 
-[ClientRpcExample.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/ClientRpcExample.kt) | [ClientRpcExample.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/ClientRpcExample.java) | ![github](/images/svg/github.svg "github")
+[ClientRpcExample.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/ClientRpcExample.kt) | [ClientRpcExample.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/ClientRpcExample.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -165,8 +165,7 @@ By default, RPC users are not permissioned to perform any RPC operations.
 
 ### Granting flow permissions
 
-You provide an RPC user with the permission to start a specific flow using the syntax
-`StartFlow.<fully qualified flow name>`:
+To grant an RPC user permission to start a specific flow, use the syntax `StartFlow.<fully qualified flow name>`, and the listed `InvokeRpc` permissions, as shown in the following example:
 
 {{< tabs name="tabs-3" >}}
 {{% tab name="groovy" %}}
@@ -176,6 +175,10 @@ rpcUsers=[
         username=exampleUser
         password=examplePass
         permissions=[
+            "InvokeRpc.nodeInfo",
+            "InvokeRpc.registeredFlows",
+            "InvokeRpc.partiesFromName",
+            "InvokeRpc.wellKnownPartyFromX500Name",
             "StartFlow.net.corda.flows.ExampleFlow1",
             "StartFlow.net.corda.flows.ExampleFlow2"
         ]
@@ -187,8 +190,7 @@ rpcUsers=[
 
 {{< /tabs >}}
 
-You can also provide an RPC user with the permission to start any flow using the syntax
-`InvokeRpc.startFlow`:
+To grant an RPC user permission to start any flow, use the syntax `InvokeRpc.startFlow`, `InvokeRpc.startTrackedFlowDynamic`, and the listed `InvokeRpc` permissions, as shown in the following example:
 
 {{< tabs name="tabs-4" >}}
 {{% tab name="groovy" %}}
@@ -198,7 +200,12 @@ rpcUsers=[
         username=exampleUser
         password=examplePass
         permissions=[
-            "InvokeRpc.startFlow"
+            "InvokeRpc.nodeInfo",
+            "InvokeRpc.registeredFlows",
+            "InvokeRpc.partiesFromName",
+            "InvokeRpc.wellKnownPartyFromX500Name",
+            "InvokeRpc.startFlow",
+            "InvokeRpc.startTrackedFlowDynamic"
         ]
     },
     ...
@@ -232,6 +239,18 @@ rpcUsers=[
 {{% /tab %}}
 
 {{< /tabs >}}
+
+### Fixing permissions
+
+If an RPC user tries to perform an RPC operation that they do not have permission for, they will see an error like this:
+
+```
+User not authorized to perform RPC call public abstract net.corda.core.node.services.Vault$Page net.corda.core.messaging.CordaRPCOps.vaultQueryByWithPagingSpec(java.lang.Class,net.corda.core.node.services.vault.QueryCriteria,net.corda.core.node.services.vault.PageSpecification) with target []
+```
+
+To fix this, you must grant them permissions based on the method name: `InvokeRpc.<method name>`, where `<method name>` is the method name of the `CordaRPCOps` interface.
+
+In this example, the method name is `vaultQueryByWithPagingSpec`, so `InvokeRpc.vaultQueryByWithPagingSpec` must be added to the RPC user's `permissions`.
 
 
 ### Granting all permissions
@@ -348,11 +367,11 @@ supported types of such data source, identified by the `dataSource.type` field:
 
 
 
-* **INMEMORY**: 
+* **INMEMORY**:
 A static list of user credentials and permissions specified by the `users` field.
 
 
-* **DB**: 
+* **DB**:
 An external RDBMS accessed via the JDBC connection described by `connection`. Note that, unlike the `INMEMORY`
 case, in a user database permissions are assigned to *roles* rather than individual users. The current implementation
 expects the database to store data according to the following schema:
@@ -529,7 +548,7 @@ How to initialize the *ReconnectingCordaRPCOps*:
 
 ```
 
-[RpcReconnectTests.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/node/src/integration-test/kotlin/net/corda/node/services/rpc/RpcReconnectTests.kt)
+[RpcReconnectTests.kt](https://github.com/corda/corda/blob/release/os/4.1/node/src/integration-test/kotlin/net/corda/node/services/rpc/RpcReconnectTests.kt)
 
 How to track the vault :
 
@@ -545,7 +564,7 @@ How to track the vault :
 
 ```
 
-[RpcReconnectTests.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/node/src/integration-test/kotlin/net/corda/node/services/rpc/RpcReconnectTests.kt)
+[RpcReconnectTests.kt](https://github.com/corda/corda/blob/release/os/4.1/node/src/integration-test/kotlin/net/corda/node/services/rpc/RpcReconnectTests.kt)
 
 How to start a flow with a logical retry function that checks for the side effects of the flow:
 
@@ -592,7 +611,7 @@ How to start a flow with a logical retry function that checks for the side effec
 
 ```
 
-[RpcReconnectTests.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/node/src/integration-test/kotlin/net/corda/node/services/rpc/RpcReconnectTests.kt)
+[RpcReconnectTests.kt](https://github.com/corda/corda/blob/release/os/4.1/node/src/integration-test/kotlin/net/corda/node/services/rpc/RpcReconnectTests.kt)
 
 Note that, as shown by the test, during reconnecting some events might be lost.
 
@@ -604,7 +623,7 @@ Note that, as shown by the test, during reconnecting some events might be lost.
 
 ```
 
-[RpcReconnectTests.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/node/src/integration-test/kotlin/net/corda/node/services/rpc/RpcReconnectTests.kt)
+[RpcReconnectTests.kt](https://github.com/corda/corda/blob/release/os/4.1/node/src/integration-test/kotlin/net/corda/node/services/rpc/RpcReconnectTests.kt)
 
 
 ## Wire security
@@ -624,7 +643,3 @@ Note that RPC TLS does not use mutual authentication, and delegates fine grained
 CorDapps must whitelist any classes used over RPC with Corda’s serialization framework, unless they are whitelisted by
 default in `DefaultWhitelist`. The whitelisting is done either via the plugin architecture or by using the
 `@CordaSerializable` annotation.  See [Object serialization](serialization.md). An example is shown in [Using the client RPC API](tutorial-clientrpc-api.md).
-
-
-
-

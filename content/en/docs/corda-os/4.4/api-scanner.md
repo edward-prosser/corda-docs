@@ -4,6 +4,8 @@ aliases:
 - /HEAD/api-scanner.html
 - /api-scanner.html
 - /releases/release-V4.4/api-scanner.html
+- /docs/corda-os/head/api-scanner.html
+- /docs/corda-os/api-scanner.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-os-4-4:
@@ -68,7 +70,7 @@ As a rule, `api-current.txt` should only be updated by the release manager for e
 We do not expect modifications to `api-current.txt` as part of normal development. However, we may sometimes need to adjust
 the public API in ways that would not break developers’ CorDapps but which would be blocked by the API Stability check.
 For example, migrating a method from an interface into a superinterface. Any changes to the API summary file should be
-included in the PR, which would then need explicit approval from either [Mike Hearn](https://github.com/mikehearn), [Rick Parker](https://github.com/rick-r3) or [Matthew Nesbit](https://github.com/mnesbit).
+included in the PR, which would then need explicit approval from R3.
 
 {{< note >}}
 If you need to modify `api-current.txt`, do not re-generate the file on the master branch. This will include new API that

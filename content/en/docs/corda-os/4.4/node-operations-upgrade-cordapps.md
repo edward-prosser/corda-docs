@@ -4,6 +4,8 @@ aliases:
 - /HEAD/node-operations-upgrade-cordapps.html
 - /node-operations-upgrade-cordapps.html
 - /releases/release-V4.4/node-operations-upgrade-cordapps.html
+- /docs/corda-os/head/node-operations-upgrade-cordapps.html
+- /docs/corda-os/node-operations-upgrade-cordapps.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-os-4-4:
@@ -78,9 +80,9 @@ In order to perform the upgrade, follow the following steps:
 
 * Once all flows have completed, stop the node
 * Replace the existing JAR with the new one
-* Make any database changes required to any custom vault tables for the upgraded CorDapp,
-following the database upgrade steps in node-operations-cordapp-deployment.
-The database update for a CorDapp upgrade follows the same steps as database setup for a new CorDapp.
+* Make any database changes required to any custom vault tables for the upgraded CorDapp. The database update for a
+CorDapp upgrade follows the same steps as database setup for a new CorDapp. Corda Enterprise users can use the Database
+Management Tool as detailed [here](../../corda-enterprise/4.4/node/operations/node-operations-cordapp-deployment.md/).
 * Restart the node
 * If you drained the node prior to upgrading, switch off flow draining mode to allow the node to continue to receive requests
     * By RPC using the `setFlowsDrainingModeEnabled` method with the parameter `false`
@@ -92,6 +94,3 @@ The database update for a CorDapp upgrade follows the same steps as database set
 provided by the CorDapp developer to query the vault and run this for all states
     * The contract upgrade initiate flow only needs to be run on one of the participants for each state. The flow will
 automatically upgrade the state on all participants.
-
-
-

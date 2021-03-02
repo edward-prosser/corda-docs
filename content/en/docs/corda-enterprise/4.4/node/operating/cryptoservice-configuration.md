@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/node/operating/cryptoservice-configuration.html
+- /docs/corda-enterprise/head/node/operating/cryptoservice-configuration.html
+- /docs/corda-enterprise/node/operating/cryptoservice-configuration.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -36,11 +38,10 @@ Importing existing keys from the file based keystore into a HSM is not supported
 
 ## Configuration
 
-As mentioned in the description of the configuration file (corda-configuration-file), the `node.conf` has two relevant fields, `cryptoServiceName` and `cryptoServiceConf`.
-
+As mentioned in the description of the configuration file ([Node configuration](../setup/corda-configuration-file.md)), the `node.conf` has two relevant fields, `cryptoServiceName` and `cryptoServiceConf`.
 
 {{< warning >}}
-The file containing the configuration for the HSM (referenced by the `cryptoServiceConf` field) contains sensitive information. So, we strongly advise using the Configuration Obfuscator tool for it, as documented here: tools-config-obfuscator
+The file containing the configuration for the HSM (referenced by the `cryptoServiceConf` field) contains sensitive information. For this reason, we strongly advise you to use the [Configuration Obfuscator](../../tools-config-obfuscator.md) tool.
 
 {{< /warning >}}
 
@@ -379,5 +380,3 @@ Module protection type is used for key generation and nCipherKM KeyStore instanc
 The communication with the HSM is achieved via a daemon middleware process (called hardserver). If that process is restarted, the node also needs to be restarted to be able to communicate with the HSM. This can be done automatically by monitoring either that process or the node’s logs for CryptoService exceptions coming from operations with the HSM.
 
 {{< /note >}}
-
-

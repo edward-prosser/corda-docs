@@ -4,6 +4,8 @@ aliases:
 - /HEAD/clientrpc.html
 - /clientrpc.html
 - /releases/release-V4.4/clientrpc.html
+- /docs/corda-os/head/clientrpc.html
+- /docs/corda-os/clientrpc.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-os-4-4:
@@ -163,8 +165,7 @@ By default, RPC users are not permissioned to perform any RPC operations.
 
 ### Granting flow permissions
 
-You provide an RPC user with the permission to start a specific flow using the syntax
-`StartFlow.<fully qualified flow name>`:
+To grant an RPC user permission to start a specific flow, use the syntax `StartFlow.<fully qualified flow name>`, and the listed `InvokeRpc` permissions, as shown in the following example:
 
 ```groovy
 rpcUsers=[
@@ -172,6 +173,10 @@ rpcUsers=[
         username=exampleUser
         password=examplePass
         permissions=[
+            "InvokeRpc.nodeInfo",
+            "InvokeRpc.registeredFlows",
+            "InvokeRpc.partiesFromName",
+            "InvokeRpc.wellKnownPartyFromX500Name",
             "StartFlow.net.corda.flows.ExampleFlow1",
             "StartFlow.net.corda.flows.ExampleFlow2"
         ]
@@ -180,8 +185,7 @@ rpcUsers=[
 ]
 ```
 
-You can also provide an RPC user with the permission to start any flow using the syntax
-`InvokeRpc.startFlow`:
+To grant an RPC user permission to start any flow, use the syntax `InvokeRpc.startFlow`, `InvokeRpc.startTrackedFlowDynamic`, and the listed `InvokeRpc` permissions, as shown in the following example:
 
 ```groovy
 rpcUsers=[
@@ -189,7 +193,12 @@ rpcUsers=[
         username=exampleUser
         password=examplePass
         permissions=[
-            "InvokeRpc.startFlow"
+            "InvokeRpc.nodeInfo",
+            "InvokeRpc.registeredFlows",
+            "InvokeRpc.partiesFromName",
+            "InvokeRpc.wellKnownPartyFromX500Name",
+            "InvokeRpc.startFlow",
+            "InvokeRpc.startTrackedFlowDynamic"
         ]
     },
     ...
@@ -215,6 +224,18 @@ rpcUsers=[
     ...
 ]
 ```
+
+### Fixing permissions
+
+If an RPC user tries to perform an RPC operation that they do not have permission for, they will see an error like this:
+
+```
+User not authorized to perform RPC call public abstract net.corda.core.node.services.Vault$Page net.corda.core.messaging.CordaRPCOps.vaultQueryByWithPagingSpec(java.lang.Class,net.corda.core.node.services.vault.QueryCriteria,net.corda.core.node.services.vault.PageSpecification) with target []
+```
+
+To fix this, you must grant them permissions based on the method name: `InvokeRpc.<method name>`, where `<method name>` is the method name of the `CordaRPCOps` interface.
+
+In this example, the method name is `vaultQueryByWithPagingSpec`, so `InvokeRpc.vaultQueryByWithPagingSpec` must be added to the RPC user's `permissions`.
 
 
 ### Granting all permissions
@@ -316,11 +337,11 @@ supported types of such data source, identified by the `dataSource.type` field:
 
 
 
-* **INMEMORY**: 
+* **INMEMORY**:
 A static list of user credentials and permissions specified by the `users` field.
 
 
-* **DB**: 
+* **DB**:
 An external RDBMS accessed via the JDBC connection described by `connection`. Note that, unlike the `INMEMORY`
 case, in a user database permissions are assigned to *roles* rather than individual users. The current implementation
 expects the database to store data according to the following schema:
@@ -607,7 +628,3 @@ Note that RPC TLS does not use mutual authentication, and delegates fine grained
 CorDapps must whitelist any classes used over RPC with Corda’s serialization framework, unless they are whitelisted by
 default in `DefaultWhitelist`. The whitelisting is done either via the plugin architecture or by using the
 `@CordaSerializable` annotation.  See [Object serialization](serialization.md). An example is shown in [Using the client RPC API](tutorial-clientrpc-api.md).
-
-
-
-

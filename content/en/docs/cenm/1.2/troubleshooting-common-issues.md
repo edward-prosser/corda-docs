@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/release-1.2/troubleshooting-common-issues.html
+- /docs/cenm/head/troubleshooting-common-issues.html
+- /docs/cenm/troubleshooting-common-issues.html
 date: '2020-01-08T09:59:25Z'
 menu:
   cenm-1-2:
@@ -40,6 +42,7 @@ status of the service (whether it is executing and if it is reachable):
 {{< table >}}
 
 |**Service**|**Request Type**|**Endpoint**|**Return Value**|
+|:--|:--|:--|:--|
 |Identity Manager service|GET|`/status`|Status information of the Identity Manager deployment.|
 |Network Map service|GET|`/network-map/my-hostname`|IP address of the caller.|
 |Revocation Workflow (sub-service of Identity Manager)|GET|`/status`|Status information of the Identity Manager deployment.|
@@ -163,4 +166,3 @@ Also make sure that the given JAR file does not attempt to use invalid or non-ex
 
 If a class in the JAR file tries to import a class that does not exist the SMR will not be able to load the JAR
 and throw this error.
-

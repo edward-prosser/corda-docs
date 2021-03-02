@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/cordapps/api-flows.html
+- /docs/corda-enterprise/head/cordapps/api-flows.html
+- /docs/corda-enterprise/cordapps/api-flows.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -297,7 +299,7 @@ Party firstNotary = getServiceHub().getNetworkMapCache().getNotaryIdentities().g
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -335,7 +337,7 @@ Party keyedCounterparty = getServiceHub().getIdentityService().partyFromKey(dumm
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -396,7 +398,7 @@ FlowSession counterpartySession = initiateFlow(counterparty);
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -432,7 +434,7 @@ counterpartySession.send(new Object());
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -488,7 +490,7 @@ Integer integer = packet1.unwrap(data -> {
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -519,7 +521,7 @@ UntrustworthyData<Object> packet3 = regulatorSession.receive(Object.class);
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -572,7 +574,7 @@ Boolean bool = packet2.unwrap(data -> {
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -613,7 +615,7 @@ counterpartySession.send(true);
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -729,7 +731,7 @@ SignedTransaction notarisedTx1 = subFlow(new FinalityFlow(fullySignedTx, singlet
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -757,7 +759,7 @@ SignedTransaction notarisedTx2 = subFlow(new FinalityFlow(fullySignedTx, partySe
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -785,7 +787,7 @@ subFlow(new ReceiveFinalityFlow(counterpartySession, idOfTxWeSigned));
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -843,7 +845,7 @@ SignedTransaction fullySignedTx = subFlow(new CollectSignaturesFlow(twiceSignedT
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -894,7 +896,7 @@ SecureHash idOfTxWeSigned = subFlow(new SignTxFlow(counterpartySession, SignTran
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -952,7 +954,7 @@ subFlow(new SendTransactionFlow(counterpartySession, twiceSignedTx) {
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -979,7 +981,7 @@ SignedTransaction verifiedTransaction = subFlow(new ReceiveTransactionFlow(count
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -1011,7 +1013,7 @@ List<StateAndRef<DummyState>> resolvedStateAndRef = subFlow(new ReceiveStateAndR
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -1205,7 +1207,7 @@ private final ProgressTracker progressTracker = new ProgressTracker(
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -1231,7 +1233,7 @@ progressTracker.setCurrentStep(ID_OTHER_NODES);
 
 
 
-[FlowCookbook.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
+[FlowCookbook.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FlowCookbook.kt) | [FlowCookbook.java](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/java/net/corda/docs/java/FlowCookbook.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -1883,6 +1885,3 @@ for (retryCount in 1..maxRetries) {
     }
 }
 ```
-
-
-

@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/release-1.2/ejbca-plugin.html
+- /docs/cenm/head/ejbca-plugin.html
+- /docs/cenm/ejbca-plugin.html
 date: '2020-01-08T09:59:25Z'
 menu:
   cenm-1-2:
@@ -112,8 +114,7 @@ administration UI.
 for which certificate will be created. Certificate request is done and after that we collect generated certifciate’s
 chain since node will only accept chains which root certificate matches the one provided in network root truststore.
 
-`submitCRL()` method takes current CRL in form of `crl` argument and set of Certificate Revocation Requests under
-`newCRRs` argument. First of all, revocation of all new revocation requests is performed. After that CRL is updated and
+`submitCRL()` method takes current CRL in form of `crl` argument and a Certificate Revocation List to be updated. First of all, revocation of all new revocation requests is performed. After that CRL is updated and
 fetched. At the end we form response as specified in interface.
 
 ```java
@@ -355,9 +356,6 @@ public class EJBCASigningPlugin implements CASigningPlugin, ENMLoggable {
 
 ```
 
-[EJBCASigningPlugin.java](https://github.com/corda/network-services/blob/release/1.2/smr-plugins/ejbca-plugin/src/main/java/com/r3/enm/smrplugins/ejbcaplugin/EJBCASigningPlugin.java)
-
-
 ## Running EJBCA plugin
 
 To run the plugin you simply need to specify its JAR path for CSR and CRL material management tasks in SMR’s
@@ -375,4 +373,3 @@ On success you should see a message similar to:
 EJBCA plugin started
 SMR Service started
 ```
-

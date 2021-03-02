@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/cordapps/state-persistence.html
+- /docs/corda-enterprise/head/cordapps/state-persistence.html
+- /docs/corda-enterprise/cordapps/state-persistence.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -479,6 +481,12 @@ the `IdentityService` to resolve keys from well know X500 identity names.
 
 ## JDBC session
 
+{{< warning >}}
+Using JDBC to interact with a node's database can have serious consequences if not carried out correctly. You must ensure
+you are able to test any changes in a safe environment and roll back if you encounter any errors. This method should be
+seen as a last resort if you cannot perform your tasks using any other method.
+{{< /warning >}}
+
 Apps may also interact directly with the underlying Node’s database by using a standard
 JDBC connection (session) as described by the [Java SQL Connection API](https://docs.oracle.com/javase/8/docs/api/java/sql/Connection.html)
 
@@ -544,7 +552,7 @@ object CustomVaultQuery {
 
 ```
 
-[CustomVaultQuery.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/vault/CustomVaultQuery.kt)
+[CustomVaultQuery.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/vault/CustomVaultQuery.kt)
 
 which is then referenced within a custom flow:
 
@@ -574,7 +582,7 @@ which is then referenced within a custom flow:
 
 ```
 
-[CustomVaultQuery.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/vault/CustomVaultQuery.kt)
+[CustomVaultQuery.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/vault/CustomVaultQuery.kt)
 
 For examples on testing `@CordaService` implementations, see the oracle example here.
 
@@ -695,4 +703,3 @@ Please note that suspendable flow operations such as:
 * `FlowLogic.subFlow`
 
 Cannot be used within the lambda function passed to `withEntityManager`.
-

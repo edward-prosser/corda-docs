@@ -236,7 +236,7 @@ You manually process received messages as follows:
 
 * `StartedMockNode.pumpReceive` to process a single message from the node’s queue
 * `MockNetwork.runNetwork` to process all the messages in every node’s queue. This may generate additional messages
-that must in turn be processed> 
+that must in turn be processed>
 
     * `network.runNetwork(-1)` (the default in Kotlin) will exchange messages until there are no further messages to
 process
@@ -336,9 +336,6 @@ SignedTransaction transaction = nodeA.getServices().getValidatedTransactions().g
 This allows you to check whether a given transaction has (or has not) been stored, and whether it has the correct
 attributes.
 
-This allows you to check whether a given state has (or has not) been stored, and whether it has the correct attributes.
-
-
 ### Further examples
 
 
@@ -379,7 +376,6 @@ private static final TestIdentity bigCorp = new TestIdentity(new CordaX500Name("
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/kotlin/net/corda/docs/tutorial/testdsl/TutorialTestDSL.kt) | [CommercialPaperTest.java](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/CommercialPaperTest.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -474,7 +470,6 @@ private val ledgerServices = MockServices(
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/kotlin/net/corda/docs/tutorial/testdsl/TutorialTestDSL.kt) | [CommercialPaperTest.java](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/CommercialPaperTest.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -515,8 +510,6 @@ private final MockServices simpleLedgerServices = new MockServices(
 
 
 
-
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/kotlin/net/corda/docs/tutorial/testdsl/TutorialTestDSL.kt) | [CommercialPaperTest.java](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/CommercialPaperTest.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -575,8 +568,6 @@ public void simpleCPMoveSuccess() {
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/kotlin/net/corda/docs/tutorial/testdsl/TutorialTestDSL.kt) | [CommercialPaperTest.java](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/CommercialPaperTest.java) | ![github](/images/svg/github.svg "github")
-
 {{< /tabs >}}
 
 Once all the transaction components have been specified, you can run `verifies()` to check that the given transaction is valid.
@@ -629,9 +620,6 @@ public void simpleCPMoveFails() {
 {{% /tab %}}
 
 
-
-
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/kotlin/net/corda/docs/tutorial/testdsl/TutorialTestDSL.kt) | [CommercialPaperTest.java](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/CommercialPaperTest.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -693,8 +681,6 @@ public void simpleCPMoveSuccessAndFailure() {
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/kotlin/net/corda/docs/tutorial/testdsl/TutorialTestDSL.kt) | [CommercialPaperTest.java](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/CommercialPaperTest.java) | ![github](/images/svg/github.svg "github")
-
 {{< /tabs >}}
 
 You can also use the `tweak` function to create a locally scoped transaction that you can make changes to
@@ -748,8 +734,6 @@ public void simpleIssuanceWithTweakTopLevelTx() {
 
 
 
-
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/kotlin/net/corda/docs/tutorial/testdsl/TutorialTestDSL.kt) | [CommercialPaperTest.java](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/CommercialPaperTest.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -862,8 +846,6 @@ public void chainCommercialPaperDoubleSpend() {
 
 
 
-[TutorialTestDSL.kt](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/kotlin/net/corda/docs/tutorial/testdsl/TutorialTestDSL.kt) | [CommercialPaperTest.java](https://github.com/corda/enterprise/blob/release/ent/3.3/docs/source/example-code/src/test/java/net/corda/docs/java/tutorial/testdsl/CommercialPaperTest.java) | ![github](/images/svg/github.svg "github")
-
 {{< /tabs >}}
 
 
@@ -901,4 +883,3 @@ Ensure that before releasing the Cordapp, [a valid script is created](database-m
 * Further examples are available in the Example CorDapp in
 [Java](https://github.com/corda/cordapp-example/blob/release-V3/java-source/src/test/java/com/example/flow/IOUFlowTests.java) and
 [Kotlin](https://github.com/corda/cordapp-example/blob/release-V3/kotlin-source/src/test/kotlin/com/example/flow/IOUFlowTests.kt)
-

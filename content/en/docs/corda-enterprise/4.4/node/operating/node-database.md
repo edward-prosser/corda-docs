@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/node/operating/node-database.html
+- /docs/corda-enterprise/head/node/operating/node-database.html
+- /docs/corda-enterprise/node/operating/node-database.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -17,7 +19,7 @@ weight: 1
 
 # Understanding the node database
 
-The Corda platform, and the installed CorDapps store their data in a relational database (see [State Persistence](../../cordapps/api-persistence.md)).
+The Corda platform, and the installed CorDapps store their data in a relational database (see [State Persistence]({{% ref "../../cordapps/state-persistence.md" %}})).
 
 Corda Enterprise supports a range of commercial 3rd party databases: Azure SQL, SQL Server, Oracle, and PostgreSQL.
 This document provides an overview of required database permissions, related ways to create database schema objects,
@@ -300,6 +302,3 @@ The tables for other experimental notary implementations are not described here.
 
 Database migration logs for Corda internal tables follow a structured format
 described in [Database Schema Migration Logging](../../node-database-migration-logging.md#database-schema-migration-logging).
-
-
-

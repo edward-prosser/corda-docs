@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/node/deploy/generating-a-node.html
+- /docs/corda-enterprise/head/node/deploy/generating-a-node.html
+- /docs/corda-enterprise/node/deploy/generating-a-node.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -41,7 +43,7 @@ The remaining files and folders described in node-structure will be generated at
 
 Corda provides a gradle plugin called `Cordform` that allows you to automatically generate and configure a set of
 nodes for testing and demos. Here is an example `Cordform` task called `deployNodes` that creates three nodes, defined
-in the [Kotlin CorDapp Template](https://github.com/corda/cordapp-template-kotlin/blob/release-V6/build.gradle#L95):
+in the [Kotlin CorDapp Template](https://github.com/corda/cordapp-template-kotlin/blob/release-V4/build.gradle#L120):
 
 ```groovy
 task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
@@ -560,4 +562,3 @@ need to re-run the task to see the changes take effect.
 
 If the task is a `Dockerform` task, running the task will also create an additional `Dockerfile` in each node
 directory in the `build/nodes` directory.
-

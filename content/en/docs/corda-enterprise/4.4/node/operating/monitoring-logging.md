@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/node/operating/monitoring-logging.html
+- /docs/corda-enterprise/head/node/operating/monitoring-logging.html
+- /docs/corda-enterprise/node/operating/monitoring-logging.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -65,7 +67,7 @@ Node can be configured to run SSH server.
 ## Database access
 
 When running a node backed with a H2 database, the node can be configured to expose the database over a socket
-(see [database access when running H2](../node-database-access-h2.html)).
+(see [database access when running H2](../../node-database-access-h2.html)).
 
 Note that in a production set up, it is highly recommended to use an enterprise grade database, and access to the
 database should be via the usual database tools mechanisms, including access control and restrictions.
@@ -107,16 +109,15 @@ be configured to collect data from Jolokia and write to DataDog web api.
 In order to ensure that a Jolokia agent is instrumented with the JVM run-time, you can choose one of these options:
 
 
-* Specify the Node configuration parameter *jmxMonitoringHttpPort*.
-* When using the launcher, add the line *-javaagent:../../drivers/jolokia-jvm-1.6.0-agent.jar=port=7777,host=localhost* to the *[JVMOptions] sections of the `launcher/app/launcher.cfg*. Make sure to place the Jolokia agent that you specify there into the *drivers* folder.
-* Start the node with *java -jar corda.jar -javaagent:drivers/jolokia-jvm-1.6.0-agent.jar=port=7777,host=localhost*.
+* Specify the Node configuration parameter `jmxMonitoringHttpPort` which will attempt to load the jolokia driver.
+* Start the node with `java -Dcapsule.jvm.args="-javaagent:path/to/jolokia-jvm-{VERSION}-agent.jar=port=7777,host=localhost" -jar corda.jar` where `path/to/jolokia-jvm-{VERSION}-agent.jar` is the path to the driver, and `{VERSION}` is the version required by Corda, currently 1.6.1.
 
 The following JMX statistics are exported:
 
 
-* Corda specific metrics: flow information (total started, finished, in-flight; flow duration by flow type), attachments (count)
-* Apache Artemis metrics: queue information for P2P and RPC services
-* JVM statistics: classloading, garbage collection, memory, runtime, threading, operating system
+* Corda specific metrics: see [Node metrics](../../node-metrics.md) for a list.
+* Apache Artemis metrics: queue information for P2P and RPC services.
+* JVM statistics: classloading, garbage collection, memory, runtime, threading, operating system.
 
 
 ### Notes for production use
@@ -136,7 +137,7 @@ When running in dev mode, Hibernate statistics are also available via the Jolkia
 due to expensive run-time costs. They can be turned on and off explicitly regardless of dev mode via the
 `exportHibernateJMXStatistics` flag on the [database configuration](../setup/corda-configuration-file.md#database-properties-ref).
 
-When starting Corda nodes using Cordformation runner (see [running nodes locally](../running-a-node.html)), you should see a startup message similar to the following:
+When starting Corda nodes using Cordformation runner (see [running nodes locally](../deploy/running-a-node.html)), you should see a startup message similar to the following:
 **Jolokia: Agent started with URL http://127.0.0.1:7005/jolokia/**
 
 When starting Corda nodes using the ‘driver DSL’, you should see a startup message in the logs similar to the following:
@@ -243,7 +244,7 @@ If this approach is taken, the passwords will appear in the windows command prom
 
 ## Obfuscating sensitive data
 
-Instead of hiding sensitive data using environment variables, another option is to use configuration obfuscation. Corda ships with a [configuration obfuscator](../tools-config-obfuscator.html) which allows the user to censor string properties in the configuration file. The config would look something like this:
+Instead of hiding sensitive data using environment variables, another option is to use configuration obfuscation. Corda ships with a [configuration obfuscator](../../tools-config-obfuscator.html) which allows the user to censor string properties in the configuration file. The config would look something like this:
 
 ```kotlin
 keyStorePassword = "<{Kwby0G9c/+jxJM+c7Vaiow==:pdy+UaakdFSmmh8WWuBOoQ==}>"
@@ -266,5 +267,3 @@ The values for `keyStorePassword` and `trustStorePassword` in the above example 
 This method does not offer full protection. We recommend using further obfuscation methods for sensitive data.
 
 {{< /warning >}}
-
-

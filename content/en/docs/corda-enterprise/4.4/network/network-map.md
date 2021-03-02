@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/network/network-map.html
+- /docs/corda-enterprise/head/network/network-map.html
+- /docs/corda-enterprise/network/network-map.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -8,12 +10,12 @@ menu:
 tags:
 - network
 - map
-title: The network map
+title: Network map
 weight: 3
 ---
 
 
-# The network map
+# Network map
 
 
 The network map is a collection of signed `NodeInfo` objects. Each NodeInfo is signed by the node it represents and
@@ -61,11 +63,16 @@ The set of REST end-points for the network map service are as follows.
 
 {{< /table >}}
 
+{{< note >}}
+
+Note that only HTTP OK (response code 200) is supported - any other kind of response codes, including HTTP redirects (for example, response code 301), are not supported.
+
+{{< /note >}}
 
 ### Additional endpoints from R3
 
 Network maps hosted by R3 or other parties using R3’s commercial network management tools typically provide some
-additional endpoints for users. These additional endpoints can be found [here](https://docs.cenm.r3.com/network-map-overview.html).
+additional endpoints for users. These additional endpoints can be found [here](../../../cenm/1.2/network-map-overview.html).
 
 HTTP is used for the network map service instead of Corda’s own AMQP based peer to peer messaging protocol to
 enable the server to be placed behind caching content delivery networks like Cloudflare, Akamai, Amazon Cloudfront and so on.
@@ -140,9 +147,7 @@ in the compatibility zone.
 
 
 * **maxMessageSize**:
-Maximum allowed size in bytes of an individual message sent over the wire. Note that attachments are
-a special case and may be fragmented for streaming transfer, however, an individual transaction or flow message
-may not be larger than this value.
+Maximum allowed size in bytes of an individual message sent over the wire.
 
 
 * **maxTransactionSize**:
@@ -296,4 +301,3 @@ java -jar corda.jar clear-network-cache
 or call RPC method *clearNetworkMapCache* (it can be invoked through the node’s shell as *run clearNetworkMapCache*, for more information on
 how to log into node’s shell see shell). As we are testing and hardening the implementation this step shouldn’t be required.
 After cleaning the cache, network map data is restored on the next poll from the server or filesystem.
-

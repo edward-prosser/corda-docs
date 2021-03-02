@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/serialization.html
+- /docs/corda-enterprise/head/serialization.html
+- /docs/corda-enterprise/serialization.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -85,7 +87,7 @@ class ExampleRPCSerializationWhitelist : SerializationWhitelist {
 
 ```
 
-[ClientRpcTutorial.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/ClientRpcTutorial.kt)
+[ClientRpcTutorial.kt](https://github.com/corda/corda/blob/release/os/4.4/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/ClientRpcTutorial.kt)
 
 {{< note >}}
 Several of the core interfaces at the heart of Corda are already annotated and so any classes that implement
@@ -130,7 +132,7 @@ the correct context as configured.
 
 This document describes what is currently and what will be supported in the Corda AMQP format from the perspective
 of CorDapp developers, to allow CorDapps to take into consideration the future state.  The AMQP serialization format will
-continue to apply the whitelisting functionality that is already in place and described in [Object serialization](.md).
+continue to apply the whitelisting functionality that is already in place and described in this page.
 
 
 ## Core Types
@@ -688,4 +690,3 @@ all versions of the class. This ensures an object serialized with an older idea 
 and a version of the current state of the class instantiated.
 
 More detail can be found in [Default Class Evolution](serialization-default-evolution.md).
-

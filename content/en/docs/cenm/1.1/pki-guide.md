@@ -97,7 +97,7 @@ It follows practices applicable for certificate authorities providing a balance 
 In this scenario, a network operator wants to create a CA hierarchy where the self-signed Root CA issues a certificate for the Subordinate CA which in turn issues
 two certificates for both Identity Manager CA and Network Map (note that the Network Map is not a CA-type entity).
 The root certificate is self-signed and its keys are to be protected with the highest security level. In normal circumstances,
-they would be used just once to sign lover-level certificates (in this case the Subordinate CA) and then placed in some secure location,
+they would be used just once to sign lower-level certificates (in this case the Subordinate CA) and then placed in some secure location,
 preferably not being accessed anymore.
 Further down in the hierarchy, the Subordinate certificate is then used to issue other certificates for other CAs.
 Additionally, there is the TLS CRL signer entity, which is also self-signed and does not act as a CA.
@@ -221,8 +221,6 @@ certificates = {
     }
 }
 ```
-
-[pki-tool-local.conf](https://github.com/corda/network-services/blob/release/1.1/pki-tool/src/test/resources/configs/pki-tool-local.conf)
 
 To simplify things even more, the PKI Tool assumes default values as much as possible so the user
 is only required to provide only essential information to the tool. At the same time, the tool allows for overriding those

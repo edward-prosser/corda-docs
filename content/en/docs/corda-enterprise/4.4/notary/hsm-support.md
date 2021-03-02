@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/notary/hsm-support.html
+- /docs/corda-enterprise/head/notary/hsm-support.html
+- /docs/corda-enterprise/notary/hsm-support.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -27,13 +29,10 @@ notary service identity is drawn in blue. Their cryptographic keys are held in a
 As noted in the above diagram, if the workers are sharing a HSM then this should be setup in a highly available configuration. Using a
 single non-HA HSM in a CFT notary cluster will introduce a single point of failure and is strongly discouraged. If a HA HSM configuration
 is not possible then see the below section on [Using Multiple HSMs](#using-multiple-hsms) for how to setup one HSM per worker node.
-
 {{< /warning >}}
 
 
 Each Notary workers needs access to three private key entries, corresponding to following entities:
-
-
 
 * The distributed Notary identity, responsible for notarising transactions.
 * The node certificate authority, responsible for issuing the legal identity and TLS certificates.
@@ -44,16 +43,14 @@ See the *enterpriseConfiguration* section of the corda-configuration-file doc fo
 When the private keys are stored in a HSM, only the certificates are stored in the keystore file.
 
 The associated certificates for the distributed notary identity and node certificate authority are issued by the Identity Manager on the
-network. See [https://docs.cenm.r3.com](https://docs.cenm.r3.com) for more information. The legal identity certificate is issued by the node certificate authority.
+network. See the [Corda OS documentation](https://docs.corda.net/docs/corda-os/index.html) for more information. The legal identity certificate is issued by the node certificate authority.
 
 The worker specific legal identity key pair is used for P2P messaging, whereas the single distributed notary identity key pair is used by
 all the notary workers of the CFT notary cluster to sign valid transactions. During operation, each notary worker will access the HSM and
 use the distributed notary key when processing notarisation requests.
 
-See the certificates-hierarchy design doc for more information on the key hierarchies used by Corda.
-
-Currently Corda Enterprise notaries only support Azure Key Vault and Securosys Primus X devices. Please read the section below for setup
-instructions and ../cryptoservice-configuration.
+For information on which HSMs are supported by Corda Enterprise, see the [platform support matrix](../platform-support-matrix.md).
+Please read the section below for setup instructions and [configuration details](../node/operating/cryptoservice-configuration.md/).
 
 
 ## Detailed instructions to deploy to Azure Key Vault
@@ -130,7 +127,7 @@ If custom aliases have not been configured then, as each worker will attempt to 
 separate HSMs must be used. Also, as noted above, if a HA HSM is not available then each worker should be setup with its own HSM.
 
 When a “one HSM per worker” setup is being used, the distributed notary service signing key has to be copied between the HSMs to ensure
-that each worker has access to it. As a consequence, your HSM of choice needs to provide a secure mechanism to keys between HSM instances.
+that each worker has access to it. As a consequence, your HSM of choice needs to provide a secure mechanism to copy keys between HSM instances.
 
 {{< note >}}
 A single Corda node (including notary workers) can not be configured to utilise more than one HSM in the current version.

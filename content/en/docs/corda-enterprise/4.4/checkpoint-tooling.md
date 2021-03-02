@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/checkpoint-tooling.html
+- /docs/corda-enterprise/head/checkpoint-tooling.html
+- /docs/corda-enterprise/checkpoint-tooling.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -61,12 +63,12 @@ To retrieve this information, execute `checkpoints dump` in the node’s shell. 
 Below are some of the more important fields included in the output:
 
 
-* `flowId`: The id of the flow
-* `topLevelFlowClass`: The name of the original flow that was invoked (by RPC or a service)
-* `topLevelFlowLogic`: Detailed view of the top level flow
-* `flowCallStackSummary`: A summarised list of the current stack of sub flows along with any progress tracker information
-* `suspendedOn`: The command that the flow is suspended on (e.g. `SuspendAndReceive`) which includes the `suspendedTimestamp`
-* `flowCallStack` A detailed view of the of the current stack of sub flows
+* `flowId`: The id of the flow.
+* `topLevelFlowClass`: The name of the original flow that was invoked (by RPC or a service).
+* `topLevelFlowLogic`: Detailed view of the top level flow.
+* `flowCallStackSummary`: A summarised list of the current stack of sub flows along with any progress tracker information.
+* `suspendedOn`: The command that the flow is suspended on (for example, `SendAndReceive`), which includes the `suspendedTimestamp`.
+* `flowCallStack` A detailed view of the of the current stack of sub flows.
 
 
 
@@ -611,4 +613,3 @@ The checkpoint dump gives good diagnostics on the reason a flow may be suspended
   }
 }
 ```
-

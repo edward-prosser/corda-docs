@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/node/operating/node-database-developer.html
+- /docs/corda-enterprise/head/node/operating/node-database-developer.html
+- /docs/corda-enterprise/node/operating/node-database-developer.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -10,7 +12,7 @@ tags:
 - database
 - developer
 title: Simplified database schema setup for development
-weight: 1
+weight: 20
 ---
 
 
@@ -46,7 +48,7 @@ Setting up a Corda node to connect to a database requires:
 * [Run the node](#db-setup-developer-step-3-ref) to auto-create schema objects
 
 Corda ships out of the box with an [H2 database](http://www.h2database.com) which doesn’t require any configuration
-(see node-database-access-h2), hence when using H2 database it’s sufficient to [start the node](node-database-admin.md#db-setup-step-3-ref)
+(see the documentation on [Database access when running H2](../../node-database-access-h2), hence when using H2 database it’s sufficient to [start the node](node-database-admin.md#db-setup-step-3-ref)
 and the database will be created.
 
 
@@ -250,7 +252,7 @@ Configuration templates for each database vendor are shown below:
 #### H2
 
 By default, nodes store their data in an H2 database.
-No database setup is needed. Optionally remote H2 access/port can be configured. See node-database-access-h2.
+No database setup is needed. Optionally remote H2 access/port can be configured. See the documentation on [Database access when running H2](../../node-database-access-h2).
 
 
 
@@ -616,6 +618,3 @@ To remove node and CorDapp specific tables run the following SQL script:
 DROP SCHEMA IF EXISTS "my_schema" CASCADE;
 DROP OWNED BY "my_user";
 ```
-
-
-

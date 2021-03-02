@@ -4,11 +4,13 @@ aliases:
 - /HEAD/app-upgrade-notes.html
 - /app-upgrade-notes.html
 - /releases/release-V4.4/app-upgrade-notes.html
+- /docs/corda-os/head/app-upgrade-notes.html
+- /docs/corda-os/app-upgrade-notes.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-os-4-4:
     identifier: corda-os-4-4-app-upgrade-notes
-    weight: 2
+    weight: 3
 tags:
 - app
 - upgrade
@@ -38,7 +40,22 @@ If you are using them you should re-namespace them to a package namespace you co
 
 {{< /warning >}}
 
+## Platform version matrix
 
+{{< table >}}
+| Corda release  | Platform version |
+| :------------- | :------------- |
+| 4.4 | 6 |
+| 4.3 | 5 |
+| 4.2 | 4 |
+| 4.1 | 4 |
+| 4.0 | 4 |
+| 3.3 | 3 |
+{{< /table >}}
+
+## Upgrading apps to Platform Version 6
+
+No manual upgrade steps are required.
 
 
 ## Upgrading apps to Platform Version 5
@@ -845,4 +862,3 @@ You have some choices here:
 * Delete your `lib` directory and switch to using the Gradle test runner
 
 Instructions for both options can be found in [Running tests in Intellij](tutorial-cordapp.md#tutorial-cordapp-running-tests-intellij).
-

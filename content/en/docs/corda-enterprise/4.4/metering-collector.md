@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/metering-collector.html
+- /docs/corda-enterprise/head/metering-collector.html
+- /docs/corda-enterprise/metering-collector.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -112,6 +114,9 @@ memory at a time. (Note that under the covers some aggregation occurs, so the nu
 more than one page of data is required, the flow may need to be run multiple times to collect the full breakdown of metering events.
 However, the total count provided is always the full number of signing events that match the supplied criteria.
 
+{{% note %}}
+The metering collection functionality Filtering by CorDapp name is case insensitive for MSSQL Server. For more information, see [Database configuration - SQL Server](node/operating/node-database-admin.md#sql-server-3)
+{{% /note %}}
 
 ### Examples
 
@@ -221,4 +226,3 @@ An example of the output JSON on the shell is shown below:
 ```bash
 {"totalCount":2,"version":1,"query":{"startDate":"2019-11-13T00:00:00Z","endDate":"2019-11-15T00:00:00Z","filter":{"filterBy":"NONE","values":[]},"pageNumber":1,"totalPages":1,"pageSize":10000},"entries":[{"signingId":{"type":"NODE_IDENTITY","accountId":null},"txType":"STANDARD","commands":["net.corda.finance.contracts.asset.Cash.Commands.Issue"],"count":1},{"signingId":{"type":"NODE_IDENTITY","accountId":null},"txType":"STANDARD","commands":["net.corda.finance.contracts.asset.Cash.Commands.Move"],"count":1}]}
 ```
-

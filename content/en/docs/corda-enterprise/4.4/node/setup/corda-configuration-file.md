@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/node/setup/corda-configuration-file.html
+- /docs/corda-enterprise/head/node/setup/corda-configuration-file.html
+- /docs/corda-enterprise/node/setup/corda-configuration-file.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -134,8 +136,8 @@ SET corda_jarDirs_1=./morelibs
 
 * Variables and properties are case sensitive. Corda will warn you if a variable
   prefixed with `CORDA` cannot be mapped to a valid property. Shadowing occurs when two properties
-  of the same type with the same key are defined. For example having `corda.p2Aaddress=host:port` and `corda_p2Aaddress=host1:port1`
-  will raise an exception on startup. This is to prevent hard to spot mistakes.
+  of the same type with the same key are defined. For example having `corda_p2Aaddress=host:port` and `corda_p2Aaddress=host1:port1`
+  will raise an exception on startup. This is to prevent mistakes that are hard to spot.
 
 * If an item in a list is overridden via an environment variable/system property, the whole list will be overridden. E.g., with a `node.conf`
   containing:
@@ -181,13 +183,11 @@ The available configuration fields are listed below in alphabetic order.
 
   Optionally specify how much memory should be used to cache attachment contents in memory.
 
-  *Default:* 10MB
+  *Default:* 8 MB plus 5% of all heap memory above 300MB.
 
 `attachmentCacheBound`
 
-  Optionally specify how many attachments should be cached locally. Note that this includes only the key and metadata, the content is cached separately and can be loaded lazily.
-
-  *Default:* 1024
+  This parameter is not used and if specified it is ignored.
 
 `blacklistedAttachmentSigningKeys`
 
@@ -278,8 +278,7 @@ The available configuration fields are listed below in alphabetic order.
    *Default:* CorDapp schema creation is controlled with ``initialiseSchema``.
 
   `runMigration`
-    Boolean on whether to run the database migration scripts at startup. In production please keep it false. For more information please
-    check :doc:`database-management`. If migration is not run, on startup, the node will check if it's running on the correct database version.
+    Boolean on whether to run the database migration scripts at startup. In production please keep it false. For more information please check [Database management scripts](../../cordapps/database-management.md). If migration is not run, on startup, the node will check if it's running on the correct database version.
     The property is used only when a node runs against a database other than H2, and it's replaced by the ``initialiseSchema`` property for other databases.
 
     *Default:* false
@@ -441,8 +440,8 @@ dataSource.password = ""
     This option only makes sense when running a standalone Artemis messaging server to connect to the Bridge.
     If this option is missing, the local file system will be used to store private keys inside ``JKS`` key stores.
 
-      `cryptoServiceName`
-        The name of HSM provider to be used. E.g.: ``UTIMACO``, ``GEMALTO_LUNA``, etc. Please see: :doc:`Crypto service configuration <cryptoservice-configuration>`.
+    `cryptoServiceName`
+         The name of HSM provider to be used. E.g.: ``UTIMACO``, ``GEMALTO_LUNA``, etc. Please see: [Using an HSM with Corda Enterprise](../operating/cryptoservice-configuration.md).
       `cryptoServiceConf`
         Absolute path to HSM provider specific configuration which will contain everything necessary to establish connection with HSM.
 
@@ -451,6 +450,12 @@ dataSource.password = ""
 
 `tuning`
     Performance tuning parameters for Corda Enterprise
+
+`backchainFetchBatchSize`
+
+This is an optimisation for sharing transaction backchains. Corda Enterprise nodes can request backchain items in bulk instead of one at a time. This field specifies the size of the batch. The value is just an integer indicating the maximum number of states that can be requested at a time during backchain resolution.
+
+*Default:* 50
 
 `flowThreadPoolSize`
   The number of threads available to handle flows in parallel. This is the number of flows
@@ -576,6 +581,10 @@ dataSource.password = ""
   This is useful for including JDBC drivers and the like. e.g. ``jarDirs = [ ${baseDirectory}"/libs" ]``.
   (Note that you have to use the ``baseDirectory`` substitution value when pointing to a relative path).
 
+{{< warning >}}
+If an item in a list is overridden via an environment variable/system property, the whole list will be overridden. This mechanism should not be used for CorDapps directory.
+{{< /warning >}}
+
   *Default:* not defined
 
     This property is only available for Corda distributed with Capsule. For the Corda tarball distribution this option is unavailable.
@@ -658,14 +667,6 @@ dataSource.password = ""
 
       *Default:* 32
 
-    `batchTimeoutMs`
-      Configures the amount of time that the notary will wait before processing
-      a batch, even if the batch is not full.  Smaller values can lead to lower
-      latency but potentially worse throughput as smaller batches might be
-      processed.
-
-      *Default:* 200
-
     `maxInputStates`
       The maximum combined number of input states processed in a single batch
       when finding conflicts.
@@ -683,7 +684,7 @@ dataSource.password = ""
       *Default:* 20
 
   `mysql`
-    If using the MySQL notary (deprecated), specify this configuration section with the settings below. For more details refer to :doc:`running-a-notary-cluster/installing-the-notary-service`.
+    If using the MySQL notary (deprecated), specify this configuration section with the settings below. For more details refer to [Configuring the notary worker nodes](../../notary/installing-the-notary-service.md).
 
       `connectionRetries`
         The number of times to retry connection to the MySQL database. This should be based on the number of database servers in the replicated
@@ -705,7 +706,7 @@ dataSource.password = ""
       `maxBatchSize`
         The maximum number of transactions processed in a single batch. Larger batches are generally processed more
         efficiently than smaller batches; however, larger batches may worsen latency. Monitor the `ProcessedBatchSize`
-        metric exposed by the notary to determine batch utilisation. For more information, see :doc:`running-a-notary-cluster/notary-metrics`
+        metric exposed by the notary to determine batch utilisation. For more information, see [Highly-available notary metrics](../../notary/notary-metrics.md).
 
         *Default:* 500
 
@@ -802,7 +803,7 @@ Example configuration:
 
         *Default:* not defined
   `jpa`
-    If using the JPA notary, specify this configuration section with the settings below. For more details refer to :doc:`running-a-notary-cluster/installing-the-notary-service`.
+    If using the JPA notary, specify this configuration section with the settings below. For more details refer to [Configuring the notary worker nodes](../../notary/installing-the-notary-service.md).
 
       `connectionRetries`
         The number of times to retry connection to the database. This should be based on the number of database servers in the replicated
@@ -854,7 +855,7 @@ Example configuration:
         initialiseSchema
           Boolean which indicates whether to update the database schema at startup (or create the schema when notary starts for the first time).
           This property is used only when a notary runs against an H2 database. For information on schema setup for non H2 databases, please
-          see :doc:`running-a-notary-cluster/installing-jpa`.
+          see [Configuring a JPA notary backend](../../notary/installing-jpa.md).
 
           *Default:* true
 
@@ -917,8 +918,8 @@ Example configuration:
   `autoAcceptEnabled`
     This flag toggles auto accepting of network parameter changes.
     If a network operator issues a network parameter change which modifies only auto-acceptable options and this behaviour is enabled then the changes will be accepted without any manual intervention from the node operator.
-    See :doc:`network-map` for more information on the update process and current auto-acceptable parameters.
-    Set to ``false`` to disable.
+    See [Network map](../../network/network-map.md) for more information on the update process and current auto-acceptable parameters.
+    Set to `false` to disable.
 
     *Default:* true
 
@@ -967,7 +968,7 @@ Example configuration:
     basic authentication.
 
   `proxyPassword`
-    Optional password for authentication with the proxy. The password can be obfuscated using the :doc:`tools-config-obfuscator`.
+    Optional password for authentication with the proxy. The password can be obfuscated using the [Configuration Obfuscator](../../tools-config-obfuscator.md).
 
   `csrToken`
     Optional token to provide alongside the certificate signing request (CSR) as part of the HTTP header during node registration.
@@ -1158,9 +1159,9 @@ Example configuration:
 
 ## Reference.conf
 
-A set of default configuration options are loaded from the built-in resource file ``/node/src/main/resources/reference.conf``.
-This file can be found in the ``:node`` gradle module of the [Corda repository](https://github.com/corda/corda).
-Any options you do not specify in your own ``node.conf`` file will use these defaults.
+A set of default configuration options are loaded from the built-in resource file `/node/src/main/resources/reference.conf`.
+This file can be found in the `:node` gradle module of the [Corda repository](https://github.com/corda/corda).
+Any options you do not specify in your own `node.conf` file will use these defaults.
 
 Here are the contents of the ``reference.conf`` file:
 
@@ -1290,4 +1291,4 @@ openssl pkcs7 -in <extract_signed_jar_directory>/META-INF/<signature_to_hash>.RS
 | openssl rsa -pubin -outform der | openssl dgst -sha256
 ```
 
- - Copy the public key hash that is generated and place it into the required location (e.g. in ``node.conf``).
+ - Copy the public key hash that is generated and place it into the required location (e.g. in `node.conf`).

@@ -4,6 +4,8 @@ aliases:
 - /HEAD/node-commandline.html
 - /node-commandline.html
 - /releases/release-V4.4/node-commandline.html
+- /docs/corda-os/head/node-commandline.html
+- /docs/corda-os/node-commandline.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-os-4-4:
@@ -23,7 +25,7 @@ The node can optionally be started with the following command-line options:
 
 
 * `--base-directory`, `-b`: The node working directory where all the files are kept (default: `.`).
-* `--config-file`, `-f`: The path to the config file. Defaults to `node.conf`.
+* `--config-file`, `-f`: The path to the config file. The path can be absolute or relative to the base directory. Defaults to `node.conf`.
 * `--dev-mode`, `-d`: Runs the node in development mode. Unsafe in production. Defaults to true on MacOS and desktop versions of Windows. False otherwise.
 * `--no-local-shell`, `-n`: Do not start the embedded shell locally.
 * `--on-unknown-config-keys <[FAIL,INFO]>`: How to behave on unknown node configuration. Defaults to FAIL.
@@ -64,4 +66,3 @@ To enable remote debugging of the node, run the node with the following JVM argu
 `java -Dcapsule.jvm.args="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005" -jar corda.jar`
 
 This will allow you to attach a debugger to your node on port 5005.
-

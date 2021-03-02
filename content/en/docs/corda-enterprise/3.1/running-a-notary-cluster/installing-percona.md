@@ -164,9 +164,8 @@ wsrep_sst_auth={{ sst_user }}:{{ sst_pass }}
 
 ```
 {{% /tab %}}
-{{/* github src='docs/source/running-a-notary-cluster/resources/wsrep.cnf' url='https://github.com/corda/enterprise/blob/3.1/docs/source/running-a-notary-cluster/resources/wsrep.cnf' raw='https://raw.githubusercontent.com/corda/enterprise/3.1/docs/source/running-a-notary-cluster/resources/wsrep.cnf' start='' end='' */}}
 
-[wsrep.cnf](https://github.com/corda/enterprise/blob/release/ent/3.1/docs/source/running-a-notary-cluster/resources/wsrep.cnf) | ![github](/images/svg/github.svg "github")
+[wsrep.cnf](../resources/wsrep.cnf) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -240,7 +239,7 @@ FLUSH PRIVILEGES;
 
 Once you have updated the `wsrep.cnf` on all nodes, start MySQL on all the
 remaining nodes of your cluster. Run this command on all nodes of your cluster,
-except the first one. The config file is shown [above](.md#wsrep-cnf).
+except the first one.
 
 ```sh
 service mysql start
@@ -257,4 +256,3 @@ mysql> use corda;
 ```
 
 In the next section, we’re [Setting up the Notary Service](installing-the-notary-service.md). You can read about [Percona Monitoring, Backup and Restore (Advanced)](operating-percona.md) in a later section of this tutorial.
-

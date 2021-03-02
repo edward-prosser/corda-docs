@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/node/deploy/deploying-a-node.html
+- /docs/corda-enterprise/head/node/deploy/deploying-a-node.html
+- /docs/corda-enterprise/node/deploy/deploying-a-node.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -22,14 +24,14 @@ whether they have developed and tested a CorDapp following the instructions in [
 or are deploying a third-party CorDapp.
 
 {{< /note >}}
+
 {{< note >}}
-When deploying multiple nodes in parallel the package tool (Capsule) that Corda uses can encounter
-issues retrieving dependencies. This is due to each node trying to download the dependencies in a common
-location.  In these cases it is recommended to set the environment variable `CAPSULE_CACHE_DIR` which
-will allow the Capsule to maintain a separate cache for each node.  This is used in the example descriptions
-below. See the [Capsule documentation](http://www.capsule.io) for more details.
+When deploying multiple nodes in parallel the package tool (Capsule) that Corda uses can encounter issues retrieving dependencies. This is due to each node trying to download the dependencies in a common location. In these cases it is recommended to set the environment variable `CAPSULE_CACHE_DIR`, which will allow the Capsule to maintain a separate cache for each node. This is used in the example descriptions below.
+
+The Capsule website has been retired. If you wish to read more about Capsule, you may be able to find documentation in the web archives - for example, the [Wayback Machine](https://archive.org/web/).
 
 {{< /note >}}
+
 {{< note >}}
 Another preferable Enterprise option when deploying multiple nodes in parallel is to use the
 Node Registration Tool.
@@ -45,7 +47,7 @@ handling, and ensures the Corda service is run at boot.
 
 
 
-* A supported Java distribution. The supported versions are listed in getting-set-up
+* A supported Java distribution (see [Getting set up for CorDapp development](getting-set-up.md))
 
 
 
@@ -249,7 +251,7 @@ at boot, and means the Corda service stays running with no users connected to th
 
 
 
-* A supported Java distribution. The supported versions are listed in getting-set-up
+* A supported Java distribution (see [Getting set up for CorDapp development](getting-set-up.md))
 
 
 
@@ -347,4 +349,3 @@ You can verify Corda is running by connecting to your RPC port from another host
 
 If you receive the message “Escape character is ^]”, Corda is running and accessible. Press Ctrl-] and Ctrl-D to exit
 telnet.
-

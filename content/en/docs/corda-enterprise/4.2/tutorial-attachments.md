@@ -67,12 +67,13 @@ Attachment metadata can be queried in a similar way to the vault (see [API: Vaul
 `AttachmentQueryCriteria` can be used to build a query using the following set of column operations:
 
 
-* Binary logical (AND, OR)
-* Comparison (LESS_THAN, LESS_THAN_OR_EQUAL, GREATER_THAN, GREATER_THAN_OR_EQUAL)
-* Equality (EQUAL, NOT_EQUAL)
-* Likeness (LIKE, NOT_LIKE)
-* Nullability (IS_NULL, NOT_NULL)
-* Collection based (IN, NOT_IN)
+* Binary logical (`AND`, `OR`)
+* Comparison (`LESS_THAN`, `LESS_THAN_OR_EQUAL`, `GREATER_THAN`, `GREATER_THAN_OR_EQUAL`)
+* Equality (`EQUAL`, `NOT_EQUAL`)
+* Likeness (`LIKE`, `NOT_LIKE`)
+* Nullability (`IS_NULL`, `NOT_NULL`)
+* Collection based (`IN`, `NOT_IN`)
+* Standard SQL-92 aggregate functions (`SUM`, `AVG`, `MIN`, `MAX`, `COUNT`)
 
 The `and` and `or` operators can be used to build complex queries. For example:
 
@@ -104,7 +105,7 @@ val complexCondition =
 
 
 
-[NodeAttachmentServiceTest.kt](https://github.com/corda/enterprise/blob/release/ent/4.2/node/src/test/kotlin/net/corda/node/services/persistence/NodeAttachmentServiceTest.kt) | ![github](/images/svg/github.svg "github")
+[NodeAttachmentServiceTest.kt](https://github.com/corda/corda/blob/release/os/4.1/node/src/test/kotlin/net/corda/node/services/persistence/NodeAttachmentServiceTest.kt) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -190,7 +191,7 @@ fun recipient(rpc: CordaRPCOps, webPort: Int) {
 
 
 
-[AttachmentDemo.kt](https://github.com/corda/enterprise/blob/release/ent/4.2/samples/attachment-demo/src/main/kotlin/net/corda/attachmentdemo/AttachmentDemo.kt) | ![github](/images/svg/github.svg "github")
+[AttachmentDemo.kt](https://github.com/corda/corda/blob/release/os/4.1/samples/attachment-demo/src/main/kotlin/net/corda/attachmentdemo/AttachmentDemo.kt) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -230,7 +231,7 @@ private fun sender(rpc: CordaRPCOps, inputStream: InputStream, hash: SecureHash.
 
 
 
-[AttachmentDemo.kt](https://github.com/corda/enterprise/blob/release/ent/4.2/samples/attachment-demo/src/main/kotlin/net/corda/attachmentdemo/AttachmentDemo.kt) | ![github](/images/svg/github.svg "github")
+[AttachmentDemo.kt](https://github.com/corda/corda/blob/release/os/4.1/samples/attachment-demo/src/main/kotlin/net/corda/attachmentdemo/AttachmentDemo.kt) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -239,4 +240,3 @@ doesn’t already have the attachment in its storage, we upload it from a JAR re
 we expected. Then a trivial transaction is built that has the attachment and a single signature and it’s sent to
 the other side using the FinalityFlow. The result of starting the flow is a stream of progress messages and a
 `returnValue` observable that can be used to watch out for the flow completing successfully.
-

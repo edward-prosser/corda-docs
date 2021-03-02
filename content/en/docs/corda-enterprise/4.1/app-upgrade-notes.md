@@ -3,9 +3,6 @@ aliases:
 - /releases/4.1/app-upgrade-notes.html
 date: '2020-01-08T09:59:25Z'
 menu:
-  corda-enterprise-4-1:
-    identifier: corda-enterprise-4-1-app-upgrade-notes
-    weight: 30
 tags:
 - app
 - upgrade
@@ -253,7 +250,7 @@ public static class SimpleFlowUsingOldApi extends FlowLogic<SignedTransaction> {
 
 
 
-[FinalityFlowMigration.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
+[FinalityFlowMigration.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -302,7 +299,7 @@ public static class SimpleFlowUsingNewApi extends FlowLogic<SignedTransaction> {
 
 
 
-[FinalityFlowMigration.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
+[FinalityFlowMigration.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -349,7 +346,7 @@ public static class SimpleNewResponderFlow extends FlowLogic<Void> {
 
 
 
-[FinalityFlowMigration.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
+[FinalityFlowMigration.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -427,7 +424,7 @@ public static class ExistingInitiatingFlow extends FlowLogic<SignedTransaction> 
 
 
 
-[FinalityFlowMigration.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
+[FinalityFlowMigration.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -487,7 +484,7 @@ if (otherSide.getCounterpartyFlowInfo().getFlowVersion() >= 2) {
 
 
 
-[FinalityFlowMigration.kt](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/enterprise/blob/release/ent/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
+[FinalityFlowMigration.kt](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/kotlin/net/corda/docs/kotlin/FinalityFlowMigration.kt) | [FinalityFlowMigration.java](https://github.com/corda/corda/blob/release/os/4.1/docs/source/example-code/src/main/java/net/corda/docs/java/FinalityFlowMigration.java) | ![github](/images/svg/github.svg "github")
 
 {{< /tabs >}}
 
@@ -693,9 +690,7 @@ packages, they could call package-private methods, which may not be expected by 
 and request ownership of your root package namespaces (e.g. `com.megacorp.*`), with the signing keys you will be using to sign your app JARs.
 The zone operator can then add your signing key to the network parameters, and prevent attackers defining types in your own package namespaces.
 Whilst this feature is optional and not strictly required, it may be helpful to block attacks at the boundaries of a Corda based application
-where type names may be taken “as read”. You can learn more about this feature and the motivation for it by reading
-“[Package namespace ownership](design/data-model-upgrades/package-namespace-ownership.md)”.
-
+where type names may be taken “as read”.
 
 ## Step 11. Consider adding extension points to your flows
 
@@ -720,7 +715,7 @@ may result in queries returning more states than expected if the node is using o
 Corda 4 adds several new APIs that help you build applications. Why not explore:
 
 
-* The [new withEntityManager API](api/javadoc/net/corda/core/node/ServiceHub.html#withEntityManager-block-) for using JPA inside your flows and services.
+* The [new withEntityManager API](https://api.corda.net/api/corda-os/4.1/html/api/javadoc/net/corda/core/node/ServiceHub.html#withEntityManager-block-) for using JPA inside your flows and services.
 * [Reference States](api-states.md#reference-states), that let you use an input state without consuming it.
 * [State Pointers](api-states.md#state-pointers), that make it easier to ‘point’ to one state from another and follow the latest version of a linear state.
 
@@ -740,4 +735,3 @@ You have some choices here:
 * Delete your `lib` directory and switch to using the Gradle test runner
 
 Instructions for both options can be found in [Running tests in Intellij](tutorial-cordapp.md#tutorial-cordapp-running-tests-intellij).
-

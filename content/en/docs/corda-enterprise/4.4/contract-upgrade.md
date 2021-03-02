@@ -1,12 +1,17 @@
 ---
 aliases:
 - /releases/4.4/contract-upgrade.html
+- /docs/corda-enterprise/head/contract-upgrade.html
+- /docs/corda-enterprise/contract-upgrade.html
 date: '2020-01-08T09:59:25Z'
-menu: []
+menu:
+  corda-enterprise-4-4:
+    parent: corda-enterprise-4-4-cordapps-contracts
 tags:
 - contract
 - upgrade
 title: Upgrading contracts
+weight: 20
 ---
 
 
@@ -134,7 +139,7 @@ class DummyContractV2 : UpgradedContractWithLegacyConstraint<DummyContract.State
 
 ```
 
-[DummyContractV2.kt](https://github.com/corda/enterprise/blob/release/ent/4.4/testing/test-utils/src/main/kotlin/net/corda/testing/contracts/DummyContractV2.kt)
+[DummyContractV2.kt](https://github.com/corda/corda/blob/release/os/4.4/testing/test-utils/src/main/kotlin/net/corda/testing/contracts/DummyContractV2.kt)
 
 
 * Bank A instructs its node to accept the contract upgrade to `DummyContractV2` for the contract state.

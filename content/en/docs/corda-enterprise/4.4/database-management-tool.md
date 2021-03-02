@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/database-management-tool.html
+- /docs/corda-enterprise/head/database-management-tool.html
+- /docs/corda-enterprise/database-management-tool.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -106,7 +108,7 @@ Additional options:
 ## Database Manager shell extensions
 
 The `install-shell-extensions` subcommand can be used to install the `database-manager` alias and auto completion for
-bash and zsh. See [Shell extensions for CLI Applications](cli-application-shell-extensions.md) for more info.
+bash and zsh. See [Shell extensions for CLI Applications]({{% ref "node/operating/cli-application-shell-extensions.md" %}}) for more info.
 
 {{< note >}}
 When running the database management tool, it is preferable to use absolute paths when specifying the “base-directory”.

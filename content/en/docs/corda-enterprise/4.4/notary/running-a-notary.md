@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/notary/running-a-notary.html
+- /docs/corda-enterprise/head/notary/running-a-notary.html
+- /docs/corda-enterprise/notary/running-a-notary.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -45,11 +47,5 @@ For a validating notary service specify:
 notary : { validating : true }
 ```
 
-See key_concepts_notaries_validation for more details about validating versus non-validating notaries.
-
 For clients to be able to use the notary service, its identity must be added to the network parameters. This will be
-done automatically when creating the network, if using network-bootstrapper. See corda-networks-index
-for more details.
-
-
-
+done automatically when creating the network, if using [Network Bootstrapper](../network-bootstrapper.md). 

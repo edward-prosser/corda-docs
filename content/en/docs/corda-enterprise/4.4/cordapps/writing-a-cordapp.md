@@ -1,6 +1,8 @@
 ---
 aliases:
 - /releases/4.4/cordapps/writing-a-cordapp.html
+- /docs/corda-enterprise/head/cordapps/writing-a-cordapp.html
+- /docs/corda-enterprise/cordapps/writing-a-cordapp.html
 date: '2020-01-08T09:59:25Z'
 menu:
   corda-enterprise-4-4:
@@ -20,16 +22,12 @@ Together, these JARs represent a single CorDapp. Typically, a single CorDapp is 
 the classes required for it to run. However, some CorDapps are designed as libraries for other Cordapps and cannot be
 run independently.
 
-Whenever a contract is used in a transaction, the JAR containing the contract’s definition is attached to the transaction
-to ensure that the same contract and state definitions are available for use if the transaction must be re-verified at a
-later date.
+A common pattern is to have:
 
-In order to reduce the overhead associated with attaching the relevant JAR, CorDapps can be designed to consist of two
-modules, one containing the CorDapp’s contracts and/or states and any dependencies, and a second module containing the
-remaining classes that depend on the contracts and/or states.
+* One module containing only the CorDapp’s contracts and/or states, as well as any required dependencies.
+* A second module containing the remaining classes that depend on these contracts and/or states.
 
 It should be noted, however, that there are scenarios where this two module structure is not required:
-
 
 * A library CorDapp containing only contracts and states would only need a single module
 * In a CorDapp with multiple sets of contracts and states that **do not** depend on each other, each independent set of
@@ -54,7 +52,7 @@ Please use the branch of the template that corresponds to the major version of C
 ### Build system
 
 The templates are built using Gradle. A Gradle wrapper is provided in the `wrapper` folder, and the dependencies are
-defined in the `build.gradle` files. See [Building and installing a CorDapp](cordapp-build-systems.md) for more information.
+defined in the `build.gradle` files. See [Building and installing a CorDapp](cordapp-build-systems.md/) for more information.
 
 No templates are currently provided for Maven or other build systems.
 
@@ -169,4 +167,3 @@ In a production CorDapp:
 `TemplateWebPlugin.java`, `resources/templateWeb`, and `net.corda.webserver.services.WebServerPluginRegistry`)
 and replace them with a production-ready webserver
 * We would also move `TemplateClient.java` into a separate module so that it is not included in the CorDapp
-
