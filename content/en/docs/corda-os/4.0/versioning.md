@@ -42,7 +42,7 @@ registers with the network map it will check its own version against the minimum
 ## Minimum platform version
 
 Applications can advertise a *minimum platform version* they require. If your app uses new APIs that were added in (for example) Corda 4.3,
-you should specify a minimum version of 5. This will ensure the app won’t be loaded by older nodes. If you can *optionally* use the new
+you should specify a minimum platform version of 5. This will ensure the app won’t be loaded by older nodes. If you can *optionally* use the new
 APIs, you can keep the minimum set to a lower number. Attempting to use new APIs on older nodes can cause `NoSuchMethodError` exceptions
 and similar problems, so you’d want to check the node version using `ServiceHub.myInfo`.
 
